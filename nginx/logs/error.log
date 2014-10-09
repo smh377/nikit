@@ -1,0 +1,1080 @@
+2013/08/01 04:45:41 [error] 3443#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:46:11 [notice] 3484#0: signal process started
+2013/08/01 04:52:03 [error] 3678#0: *6 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:10 [notice] 3689#0: signal process started
+2013/08/01 04:52:13 [error] 3707#0: *4 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:26 [error] 3707#0: *4 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:38 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:42 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:45 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:46 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:49 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:51 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:53 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:52:54 [error] 3707#0: *1 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:53:26 [error] 3707#0: *9 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:54:18 [error] 3707#0: *3 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:54:21 [error] 3707#0: *3 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:55:25 [notice] 3719#0: signal process started
+2013/08/01 04:58:14 [error] 3737#0: *8 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 04:58:34 [notice] 3748#0: signal process started
+2013/08/01 04:58:41 [error] 3766#0: *3 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 05:00:06 [notice] 3778#0: signal process started
+2013/08/01 05:00:10 [error] 3796#0: *4 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/favicon.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 05:00:20 [error] 3796#0: *4 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/apple-touch-icon-144-precomposed.png HTTP/1.1", host: "jdclubuntu", referrer: "http://jdclubuntu/"
+2013/08/01 05:00:59 [notice] 3807#0: signal process started
+2013/08/01 05:02:58 [error] 3825#0: *2 open() "/home/decoster/nikit3/nginx/../docrooterror" failed (2: No such file or directory), client: 192.168.30.234, server: jdclubuntu, request: "GET /assets/ico/apple-touch-icon-144-precomposedqq.png HTTP/1.1", host: "jdclubuntu"
+2013/08/01 05:03:17 [notice] 3836#0: signal process started
+2013/08/06 04:55:02 [error] 3286#0: *5 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=6 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=6"
+2013/08/06 04:55:02 [notice] 3298#0: signal process started
+2013/08/06 04:55:16 [notice] 3329#0: signal process started
+2013/08/06 04:59:17 [notice] 3367#0: signal process started
+2013/08/06 04:59:50 [notice] 3398#0: signal process started
+2013/08/06 05:00:09 [notice] 3453#0: signal process started
+2013/08/06 05:25:25 [notice] 3536#0: signal process started
+2013/08/06 05:33:34 [notice] 3566#0: signal process started
+2013/08/06 05:34:34 [notice] 3602#0: signal process started
+2013/08/06 05:35:19 [notice] 3635#0: signal process started
+2013/08/06 05:35:48 [notice] 3670#0: signal process started
+2013/08/06 11:49:29 [emerg] 4088#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 11:49:29 [emerg] 4088#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 11:49:29 [emerg] 4088#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 11:49:29 [emerg] 4088#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 11:49:29 [emerg] 4088#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 11:49:29 [emerg] 4088#0: still could not bind()
+2013/08/06 11:49:33 [notice] 4101#0: signal process started
+2013/08/06 11:50:00 [error] 4119#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /edit?N=6 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 11:50:00 [notice] 4130#0: signal process started
+2013/08/06 11:51:11 [notice] 4159#0: signal process started
+2013/08/06 12:16:54 [emerg] 4258#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 12:16:54 [emerg] 4258#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 12:16:54 [emerg] 4258#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 12:16:55 [notice] 4266#0: signal process started
+2013/08/06 12:17:47 [error] 4284#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/ref?N=39"
+2013/08/06 12:17:47 [notice] 4300#0: signal process started
+2013/08/06 12:27:41 [notice] 4336#0: signal process started
+2013/08/06 12:31:21 [notice] 4366#0: signal process started
+2013/08/06 12:31:56 [error] 4384#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /page?N=18 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 12:31:56 [notice] 4395#0: signal process started
+2013/08/06 12:34:41 [notice] 4426#0: signal process started
+2013/08/06 12:35:44 [error] 4444#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /history?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=7&R=0&E=1"
+2013/08/06 12:38:34 [notice] 4455#0: signal process started
+2013/08/06 12:46:16 [notice] 4506#0: signal process started
+2013/08/06 12:48:23 [error] 4524#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 12:49:25 [notice] 4538#0: signal process started
+2013/08/06 12:56:28 [error] 4718#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 12:56:28 [notice] 4729#0: signal process started
+2013/08/06 12:58:16 [notice] 4785#0: signal process started
+2013/08/06 12:59:26 [error] 4805#0: *6 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 12:59:26 [notice] 4819#0: signal process started
+2013/08/06 13:00:04 [error] 4837#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 13:00:04 [notice] 4848#0: signal process started
+2013/08/06 13:00:14 [error] 4866#0: *5 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=40"
+2013/08/06 13:00:35 [error] 4866#0: *5 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40&V=0 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/history?N=40"
+2013/08/06 13:00:40 [error] 4866#0: *5 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=40"
+2013/08/06 13:00:55 [error] 4866#0: *8 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=40"
+2013/08/06 13:01:04 [error] 4866#0: *8 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 13:02:09 [notice] 4877#0: signal process started
+2013/08/06 13:02:12 [error] 4895#0: *1 upstream sent invalid header while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 13:03:23 [notice] 4907#0: signal process started
+2013/08/06 13:07:45 [notice] 4943#0: signal process started
+2013/08/06 13:10:05 [notice] 4994#0: signal process started
+2013/08/06 13:10:33 [error] 5012#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 13:10:33 [error] 5012#0: *8 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /image?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=40"
+2013/08/06 13:10:33 [notice] 5023#0: signal process started
+2013/08/06 13:13:29 [notice] 5053#0: signal process started
+2013/08/06 13:19:39 [emerg] 5111#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:19:39 [emerg] 5111#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:19:39 [emerg] 5111#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:19:39 [emerg] 5111#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:19:39 [emerg] 5111#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:19:41 [notice] 5119#0: signal process started
+2013/08/06 13:19:59 [notice] 5148#0: signal process started
+2013/08/06 13:23:13 [notice] 5181#0: signal process started
+2013/08/06 13:26:56 [notice] 5218#0: signal process started
+2013/08/06 13:28:28 [notice] 5266#0: signal process started
+2013/08/06 13:36:00 [emerg] 5331#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:36:00 [emerg] 5331#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:36:00 [emerg] 5331#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 13:36:02 [notice] 5339#0: signal process started
+2013/08/06 13:36:22 [error] 5357#0: *5 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 13:36:22 [notice] 5368#0: signal process started
+2013/08/06 13:37:07 [notice] 5398#0: signal process started
+2013/08/06 13:40:22 [error] 5446#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
+2013/08/06 13:40:22 [notice] 5459#0: signal process started
+2013/08/06 13:40:43 [notice] 5493#0: signal process started
+2013/08/06 13:57:01 [notice] 5784#0: signal process started
+2013/08/06 13:57:01 [error] 5784#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/08/06 14:16:59 [notice] 5952#0: signal process started
+2013/08/06 14:31:38 [notice] 6039#0: signal process started
+2013/08/06 14:34:06 [error] 6069#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /preview HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=6"
+2013/08/06 14:34:47 [notice] 6087#0: signal process started
+2013/08/06 14:53:34 [notice] 6202#0: signal process started
+2013/08/06 14:56:45 [notice] 6251#0: signal process started
+2013/08/06 15:00:58 [notice] 6295#0: signal process started
+2013/08/06 15:01:26 [notice] 6324#0: signal process started
+2013/08/06 15:01:54 [notice] 6353#0: signal process started
+2013/08/06 15:29:46 [notice] 6460#0: signal process started
+2013/08/06 15:29:56 [notice] 6493#0: signal process started
+2013/08/06 15:32:35 [error] 6522#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /page?N=40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 15:42:42 [emerg] 6569#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 15:42:42 [emerg] 6569#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 15:42:42 [emerg] 6569#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/06 15:42:43 [notice] 6577#0: signal process started
+2013/08/06 16:07:24 [notice] 6636#0: signal process started
+2013/08/06 16:09:11 [notice] 6699#0: signal process started
+2013/08/06 16:09:23 [error] 6717#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET /wiki.js HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/06 16:09:49 [notice] 6728#0: signal process started
+2013/08/06 16:16:03 [notice] 6773#0: signal process started
+2013/08/07 15:00:32 [notice] 3360#0: signal process started
+2013/08/07 16:14:34 [emerg] 3490#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/07 16:14:34 [emerg] 3490#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/07 16:14:34 [emerg] 3490#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/07 16:14:35 [notice] 3498#0: signal process started
+2013/08/07 16:14:40 [notice] 3528#0: signal process started
+2013/08/12 09:40:38 [notice] 3052#0: signal process started
+2013/08/12 09:45:19 [notice] 3092#0: signal process started
+2013/08/12 09:46:28 [notice] 3123#0: signal process started
+2013/08/12 09:48:39 [notice] 3158#0: signal process started
+2013/08/12 09:49:03 [error] 3176#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=6 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/12 09:49:03 [notice] 3187#0: signal process started
+2013/08/12 09:49:34 [notice] 3220#0: signal process started
+2013/08/12 09:50:14 [notice] 3251#0: signal process started
+2013/08/12 09:50:24 [notice] 3284#0: signal process started
+2013/08/12 10:08:58 [emerg] 3374#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/12 10:08:58 [emerg] 3374#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/12 10:08:58 [emerg] 3374#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/12 10:08:58 [emerg] 3374#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/12 10:09:00 [notice] 3382#0: signal process started
+2013/08/12 10:09:14 [error] 3400#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=6 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=6"
+2013/08/12 10:09:14 [notice] 3430#0: signal process started
+2013/08/12 10:10:14 [notice] 3461#0: signal process started
+2013/08/12 10:10:39 [notice] 3492#0: signal process started
+2013/08/12 10:12:25 [notice] 3523#0: signal process started
+2013/08/12 10:18:08 [notice] 3561#0: signal process started
+2013/08/12 10:18:33 [notice] 3594#0: signal process started
+2013/08/12 10:18:46 [error] 3612#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=6 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=6"
+2013/08/12 10:18:46 [notice] 3623#0: signal process started
+2013/08/12 10:24:01 [notice] 3712#0: signal process started
+2013/08/14 11:22:47 [notice] 2981#0: signal process started
+2013/08/14 11:23:23 [notice] 3010#0: signal process started
+2013/08/14 11:24:45 [notice] 3040#0: signal process started
+2013/08/14 11:28:11 [emerg] 3089#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/14 11:28:11 [emerg] 3089#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/14 11:28:11 [emerg] 3089#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/14 11:28:11 [emerg] 3089#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/08/14 11:28:13 [notice] 3097#0: signal process started
+2013/08/14 11:28:39 [notice] 3126#0: signal process started
+2013/08/14 11:40:36 [notice] 3184#0: signal process started
+2013/08/14 11:41:39 [notice] 3226#0: signal process started
+2013/08/14 11:42:26 [notice] 3255#0: signal process started
+2013/08/14 11:46:26 [notice] 3296#0: signal process started
+2013/08/14 11:47:08 [notice] 3330#0: signal process started
+2013/08/14 11:54:49 [notice] 3361#0: signal process started
+2013/08/14 16:26:01 [notice] 3650#0: signal process started
+2013/08/14 16:38:38 [error] 3793#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "GET / HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/08/14 16:38:38 [notice] 3807#0: signal process started
+2013/08/14 16:40:33 [notice] 3860#0: signal process started
+2013/08/14 16:43:08 [notice] 3904#0: signal process started
+2013/09/02 10:57:07 [emerg] 3248#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/02 10:57:07 [emerg] 3248#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/02 10:57:07 [emerg] 3248#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/02 10:57:07 [emerg] 3248#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/02 10:57:07 [emerg] 3248#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/02 10:57:09 [notice] 3256#0: signal process started
+2013/09/02 10:58:39 [error] 3274#0: *4 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/02 10:58:55 [notice] 3289#0: signal process started
+2013/09/02 11:00:01 [error] 3307#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/02 11:05:29 [notice] 3521#0: signal process started
+2013/09/02 11:05:52 [error] 3539#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/02 11:05:52 [notice] 3550#0: signal process started
+2013/09/02 11:06:08 [error] 3568#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/02 11:06:08 [notice] 3579#0: signal process started
+2013/09/02 11:06:41 [error] 3597#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=7 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/02 11:06:41 [notice] 3608#0: signal process started
+2013/09/02 11:07:53 [error] 3626#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /edit?N=7&A=0&V=-1&S=-1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=7"
+2013/09/02 11:17:57 [notice] 3664#0: signal process started
+2013/09/02 11:19:52 [error] 3682#0: *4 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /edit?N=43 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=43&R=0&E=1"
+2013/09/02 11:20:25 [notice] 3695#0: signal process started
+2013/09/02 11:22:39 [error] 3713#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 11:27:33 [notice] 3749#0: signal process started
+2013/09/02 11:28:09 [notice] 3778#0: signal process started
+2013/09/02 11:29:07 [notice] 3807#0: signal process started
+2013/09/02 11:30:14 [notice] 3838#0: signal process started
+2013/09/02 11:32:05 [notice] 3868#0: signal process started
+2013/09/02 11:32:20 [notice] 3897#0: signal process started
+2013/09/02 11:32:35 [notice] 3926#0: signal process started
+2013/09/02 11:32:42 [notice] 3955#0: signal process started
+2013/09/02 11:36:01 [notice] 3986#0: signal process started
+2013/09/02 11:36:29 [notice] 4015#0: signal process started
+2013/09/02 11:47:27 [notice] 4068#0: signal process started
+2013/09/02 11:48:46 [notice] 4095#0: signal process started
+2013/09/02 11:50:03 [notice] 4125#0: signal process started
+2013/09/02 11:51:34 [notice] 4156#0: signal process started
+2013/09/02 11:51:58 [notice] 4185#0: signal process started
+2013/09/02 11:53:13 [notice] 4215#0: signal process started
+2013/09/02 11:54:11 [notice] 4244#0: signal process started
+2013/09/02 12:04:22 [notice] 4276#0: signal process started
+2013/09/02 12:04:47 [notice] 4305#0: signal process started
+2013/09/02 14:05:20 [notice] 4441#0: signal process started
+2013/09/02 14:08:22 [notice] 4482#0: signal process started
+2013/09/02 14:09:15 [notice] 4532#0: signal process started
+2013/09/02 14:09:30 [notice] 4563#0: signal process started
+2013/09/02 14:11:33 [notice] 4594#0: signal process started
+2013/09/02 14:19:13 [notice] 4630#0: signal process started
+2013/09/02 14:19:58 [notice] 4667#0: signal process started
+2013/09/02 14:21:36 [error] 4685#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:25:50 [notice] 4698#0: signal process started
+2013/09/02 14:27:01 [error] 4716#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:28:38 [notice] 4728#0: signal process started
+2013/09/02 14:29:32 [error] 4746#0: *4 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:29:32 [notice] 4757#0: signal process started
+2013/09/02 14:30:22 [error] 4775#0: *4 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:30:22 [notice] 4786#0: signal process started
+2013/09/02 14:31:28 [error] 4804#0: *4 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:31:45 [notice] 4816#0: signal process started
+2013/09/02 14:32:23 [error] 4834#0: *6 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:32:23 [notice] 4845#0: signal process started
+2013/09/02 14:33:30 [error] 4863#0: *7 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 14:44:11 [notice] 4893#0: signal process started
+2013/09/02 14:45:18 [error] 4911#0: *4 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 15:24:23 [notice] 4959#0: signal process started
+2013/09/02 15:28:31 [notice] 4998#0: signal process started
+2013/09/02 15:30:53 [notice] 5033#0: signal process started
+2013/09/02 15:31:34 [notice] 5066#0: signal process started
+2013/09/02 15:38:30 [error] 5084#0: *39 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 15:41:36 [notice] 5144#0: signal process started
+2013/09/02 15:42:48 [error] 5162#0: *6 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 15:44:23 [notice] 5173#0: signal process started
+2013/09/02 15:44:46 [error] 5191#0: *4 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 15:44:46 [notice] 5202#0: signal process started
+2013/09/02 15:47:24 [notice] 5233#0: signal process started
+2013/09/02 15:52:49 [notice] 5264#0: signal process started
+2013/09/02 15:56:38 [notice] 5295#0: signal process started
+2013/09/02 16:01:15 [notice] 5326#0: signal process started
+2013/09/02 16:03:39 [notice] 5361#0: signal process started
+2013/09/02 16:06:28 [error] 5379#0: *8 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 16:07:23 [error] 5379#0: *11 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 16:07:59 [notice] 5397#0: signal process started
+2013/09/02 16:08:34 [notice] 5426#0: signal process started
+2013/09/02 16:09:12 [error] 5444#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 16:09:12 [notice] 5474#0: signal process started
+2013/09/02 16:10:17 [notice] 5506#0: signal process started
+2013/09/02 16:13:57 [notice] 5539#0: signal process started
+2013/09/02 16:16:51 [error] 5557#0: *14 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 16:17:27 [notice] 5591#0: signal process started
+2013/09/02 16:19:17 [error] 5609#0: *6 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=43"
+2013/09/02 16:20:11 [notice] 5624#0: signal process started
+2013/09/02 16:31:27 [notice] 5666#0: signal process started
+2013/09/02 16:32:13 [notice] 5699#0: signal process started
+2013/09/02 16:32:34 [notice] 5730#0: signal process started
+2013/09/02 16:33:01 [notice] 5762#0: signal process started
+2013/09/02 16:33:42 [notice] 5793#0: signal process started
+2013/09/02 16:34:15 [notice] 5824#0: signal process started
+2013/09/02 16:59:01 [notice] 5874#0: signal process started
+2013/09/08 20:29:50 [notice] 3163#0: signal process started
+2013/09/08 20:30:10 [notice] 3192#0: signal process started
+2013/09/08 20:30:13 [notice] 3221#0: signal process started
+2013/09/08 20:49:37 [notice] 3288#0: signal process started
+2013/09/09 10:24:10 [notice] 3347#0: signal process started
+2013/09/09 10:28:27 [notice] 3381#0: signal process started
+2013/09/09 10:32:14 [notice] 3413#0: signal process started
+2013/09/09 10:33:17 [notice] 3451#0: signal process started
+2013/09/09 10:39:29 [error] 3492#0: *15 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 10:39:29 [notice] 3523#0: signal process started
+2013/09/09 10:46:35 [error] 3541#0: *27 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=105 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/09 10:46:43 [emerg] 3585#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 10:46:43 [emerg] 3585#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 10:46:43 [emerg] 3585#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 10:46:43 [emerg] 3585#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 10:46:43 [emerg] 3585#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 10:46:43 [emerg] 3585#0: still could not bind()
+2013/09/09 10:46:46 [notice] 3598#0: signal process started
+2013/09/09 10:50:03 [notice] 3628#0: signal process started
+2013/09/09 11:10:24 [notice] 3681#0: signal process started
+2013/09/09 11:10:58 [error] 3699#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=4 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/search?S=help&_charset_=UTF-8"
+2013/09/09 11:10:58 [notice] 3710#0: signal process started
+2013/09/09 11:12:30 [notice] 3740#0: signal process started
+2013/09/09 11:14:21 [notice] 3769#0: signal process started
+2013/09/09 11:17:46 [notice] 3816#0: signal process started
+2013/09/09 11:18:24 [notice] 3845#0: signal process started
+2013/09/09 11:29:17 [notice] 3887#0: signal process started
+2013/09/09 11:34:23 [notice] 3920#0: signal process started
+2013/09/09 11:35:26 [notice] 3963#0: signal process started
+2013/09/09 11:35:45 [error] 3981#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=111 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=111"
+2013/09/09 11:35:45 [notice] 3992#0: signal process started
+2013/09/09 11:36:01 [notice] 4021#0: signal process started
+2013/09/09 11:36:24 [notice] 4050#0: signal process started
+2013/09/09 11:36:37 [notice] 4079#0: signal process started
+2013/09/09 12:19:36 [notice] 4177#0: signal process started
+2013/09/09 12:20:32 [emerg] 4205#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 12:20:32 [emerg] 4205#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 12:20:32 [emerg] 4205#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 12:20:32 [emerg] 4205#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 12:20:32 [emerg] 4205#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/09 12:20:32 [emerg] 4205#0: still could not bind()
+2013/09/09 12:20:36 [notice] 4218#0: signal process started
+2013/09/09 12:22:15 [notice] 4247#0: signal process started
+2013/09/09 12:24:28 [notice] 4277#0: signal process started
+2013/09/09 12:24:58 [notice] 4306#0: signal process started
+2013/09/09 12:25:06 [notice] 4335#0: signal process started
+2013/09/09 12:30:06 [notice] 4372#0: signal process started
+2013/09/09 12:46:46 [notice] 4429#0: signal process started
+2013/09/09 12:46:51 [notice] 4458#0: signal process started
+2013/09/09 14:13:19 [error] 4566#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:13:20 [notice] 4580#0: signal process started
+2013/09/09 14:17:42 [notice] 4614#0: signal process started
+2013/09/09 14:18:27 [notice] 4644#0: signal process started
+2013/09/09 14:19:16 [notice] 4673#0: signal process started
+2013/09/09 14:24:32 [notice] 4703#0: signal process started
+2013/09/09 14:27:40 [notice] 4740#0: signal process started
+2013/09/09 14:29:08 [notice] 4770#0: signal process started
+2013/09/09 14:32:14 [notice] 4799#0: signal process started
+2013/09/09 14:52:11 [error] 4846#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:52:17 [error] 4846#0: *4 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:52:45 [error] 4846#0: *6 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:52:56 [error] 4846#0: *7 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:53:29 [error] 4846#0: *19 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:54:08 [error] 4846#0: *21 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:54:35 [error] 4846#0: *36 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:55:15 [notice] 4859#0: signal process started
+2013/09/09 14:58:52 [error] 4877#0: *13 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 14:59:21 [notice] 4889#0: signal process started
+2013/09/09 15:00:31 [error] 4907#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 15:00:31 [error] 4907#0: *7 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 15:00:31 [notice] 4918#0: signal process started
+2013/09/09 15:01:26 [error] 4936#0: *3 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=50"
+2013/09/09 15:01:26 [notice] 4947#0: signal process started
+2013/09/09 15:02:39 [notice] 4976#0: signal process started
+2013/09/09 15:22:08 [notice] 5080#0: signal process started
+2013/09/09 15:22:46 [notice] 5109#0: signal process started
+2013/09/09 15:23:30 [notice] 5139#0: signal process started
+2013/09/09 15:23:46 [notice] 5168#0: signal process started
+2013/09/09 15:23:58 [notice] 5197#0: signal process started
+2013/09/09 15:24:50 [error] 5216#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=115 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/09 15:27:58 [notice] 5227#0: signal process started
+2013/09/09 15:50:33 [notice] 5280#0: signal process started
+2013/09/10 12:35:50 [notice] 3205#0: signal process started
+2013/09/10 12:37:50 [notice] 3238#0: signal process started
+2013/09/10 13:00:50 [notice] 3301#0: signal process started
+2013/09/10 15:43:15 [error] 3486#0: *32 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit?N=2"
+2013/09/10 15:43:15 [notice] 3517#0: signal process started
+2013/09/10 15:45:29 [notice] 3548#0: signal process started
+2013/09/10 15:48:08 [notice] 3578#0: signal process started
+2013/09/10 15:53:37 [notice] 3610#0: signal process started
+2013/09/13 09:02:21 [error] 2966#0: *12 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /session HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/13 09:02:21 [notice] 2979#0: signal process started
+2013/09/13 09:03:15 [notice] 3008#0: signal process started
+2013/09/13 09:08:14 [notice] 3039#0: signal process started
+2013/09/13 09:09:25 [notice] 3087#0: signal process started
+2013/09/13 09:11:32 [notice] 3116#0: signal process started
+2013/09/13 09:15:30 [notice] 3145#0: signal process started
+2013/09/13 09:16:50 [notice] 3174#0: signal process started
+2013/09/13 09:30:34 [notice] 3209#0: signal process started
+2013/09/13 09:32:16 [notice] 3240#0: signal process started
+2013/09/13 09:33:55 [notice] 3273#0: signal process started
+2013/09/13 09:34:03 [error] 3291#0: *2 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /session/stop HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "https://jdclubuntu/session"
+2013/09/13 09:34:03 [notice] 3302#0: signal process started
+2013/09/13 09:34:37 [notice] 3333#0: signal process started
+2013/09/13 09:35:21 [notice] 3362#0: signal process started
+2013/09/13 09:36:24 [notice] 3391#0: signal process started
+2013/09/13 09:43:07 [notice] 3439#0: signal process started
+2013/09/13 09:44:07 [notice] 3468#0: signal process started
+2013/09/13 09:49:48 [notice] 3499#0: signal process started
+2013/09/13 10:12:26 [error] 3548#0: *24 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /recent HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=4"
+2013/09/13 10:12:26 [notice] 3560#0: signal process started
+2013/09/13 10:13:27 [error] 3578#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /recent HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page?N=4"
+2013/09/13 10:13:27 [notice] 3589#0: signal process started
+2013/09/13 10:20:47 [notice] 3623#0: signal process started
+2013/09/13 10:25:59 [notice] 3664#0: signal process started
+2013/09/13 10:27:52 [notice] 3693#0: signal process started
+2013/09/13 10:30:41 [notice] 3722#0: signal process started
+2013/09/13 10:31:48 [notice] 3751#0: signal process started
+2013/09/13 10:39:56 [error] 3793#0: *11 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /login HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "https://jdclubuntu/login"
+2013/09/13 10:39:56 [notice] 3805#0: signal process started
+2013/09/13 10:41:32 [error] 3823#0: *27 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /users/insert HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "https://jdclubuntu/users"
+2013/09/13 10:41:32 [notice] 3834#0: signal process started
+2013/09/13 10:43:23 [error] 3853#0: *9 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /users/insert HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "https://jdclubuntu/users"
+2013/09/13 10:43:23 [notice] 3864#0: signal process started
+2013/09/13 10:51:03 [notice] 3893#0: signal process started
+2013/09/13 14:32:56 [emerg] 4164#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:32:56 [emerg] 4164#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:32:56 [emerg] 4164#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:32:56 [emerg] 4164#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:32:58 [notice] 4172#0: signal process started
+2013/09/13 14:33:02 [emerg] 4200#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:02 [emerg] 4200#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:02 [emerg] 4200#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:02 [emerg] 4200#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:04 [notice] 4208#0: signal process started
+2013/09/13 14:33:44 [emerg] 4239#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:44 [emerg] 4239#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:44 [emerg] 4239#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:44 [emerg] 4239#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:44 [emerg] 4239#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:44 [emerg] 4239#0: still could not bind()
+2013/09/13 14:33:51 [emerg] 4251#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:51 [emerg] 4251#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:51 [emerg] 4251#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 14:33:52 [notice] 4259#0: signal process started
+2013/09/13 14:39:39 [notice] 4308#0: signal process started
+2013/09/13 14:39:57 [notice] 4337#0: signal process started
+2013/09/13 14:41:35 [notice] 4367#0: signal process started
+2013/09/13 15:06:41 [error] 4443#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /query HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/query"
+2013/09/13 15:06:41 [notice] 4454#0: signal process started
+2013/09/13 15:07:08 [error] 4472#0: *4 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=5 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/13 15:07:08 [notice] 4483#0: signal process started
+2013/09/13 15:07:30 [notice] 4512#0: signal process started
+2013/09/13 15:15:19 [notice] 4579#0: signal process started
+2013/09/13 15:16:41 [notice] 4608#0: signal process started
+2013/09/13 15:18:05 [notice] 4642#0: signal process started
+2013/09/13 15:18:19 [notice] 4671#0: signal process started
+2013/09/13 15:20:03 [notice] 4700#0: signal process started
+2013/09/13 15:20:32 [notice] 4730#0: signal process started
+2013/09/13 15:25:35 [notice] 4766#0: signal process started
+2013/09/13 15:35:26 [notice] 4819#0: signal process started
+2013/09/13 15:42:38 [notice] 4868#0: signal process started
+2013/09/13 15:44:52 [notice] 4897#0: signal process started
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/13 15:45:06 [emerg] 4925#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/13 15:45:07 [notice] 4933#0: signal process started
+2013/09/13 15:45:25 [notice] 4963#0: signal process started
+2013/09/13 15:51:59 [notice] 4993#0: signal process started
+2013/09/19 14:04:13 [notice] 3088#0: signal process started
+2013/09/19 14:05:03 [error] 3122#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /4 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/19 14:05:31 [notice] 3136#0: signal process started
+2013/09/19 14:08:22 [notice] 3165#0: signal process started
+2013/09/19 14:09:16 [notice] 3217#0: signal process started
+2013/09/19 14:09:26 [notice] 3246#0: signal process started
+2013/09/19 14:13:04 [notice] 3297#0: signal process started
+2013/09/19 14:24:02 [notice] 3354#0: signal process started
+2013/09/19 14:24:50 [notice] 3383#0: signal process started
+2013/09/19 14:28:11 [notice] 3418#0: signal process started
+2013/09/19 14:44:54 [notice] 3478#0: signal process started
+2013/09/19 16:13:27 [notice] 3567#0: signal process started
+2013/09/19 16:13:27 [error] 3567#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/09/20 09:50:48 [notice] 3316#0: signal process started
+2013/09/20 09:58:20 [notice] 3359#0: signal process started
+2013/09/20 09:59:32 [notice] 3388#0: signal process started
+2013/09/20 10:03:49 [notice] 3426#0: signal process started
+2013/09/20 10:04:47 [notice] 3455#0: signal process started
+2013/09/20 10:05:10 [notice] 3484#0: signal process started
+2013/09/20 10:06:11 [notice] 3513#0: signal process started
+2013/09/20 10:06:49 [notice] 3542#0: signal process started
+2013/09/20 10:26:51 [notice] 3726#0: signal process started
+2013/09/20 10:50:43 [notice] 3791#0: signal process started
+2013/09/20 11:10:22 [notice] 3861#0: signal process started
+2013/09/20 11:10:38 [emerg] 3889#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/20 11:10:38 [emerg] 3889#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/20 11:10:38 [emerg] 3889#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/20 11:10:38 [emerg] 3889#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/20 11:10:38 [emerg] 3889#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/20 11:10:40 [notice] 3897#0: signal process started
+2013/09/20 11:11:11 [notice] 3926#0: signal process started
+2013/09/20 11:11:49 [notice] 3955#0: signal process started
+2013/09/20 11:22:53 [notice] 3989#0: signal process started
+2013/09/20 11:26:35 [notice] 4018#0: signal process started
+2013/09/20 11:29:08 [notice] 4047#0: signal process started
+2013/09/20 11:33:25 [notice] 4083#0: signal process started
+2013/09/20 11:40:51 [notice] 4136#0: signal process started
+2013/09/20 11:41:46 [notice] 4165#0: signal process started
+2013/09/20 11:43:28 [notice] 4200#0: signal process started
+2013/09/20 11:51:50 [notice] 4236#0: signal process started
+2013/09/20 11:55:11 [notice] 4266#0: signal process started
+2013/09/20 12:16:55 [error] 4310#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=4 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/20 12:16:59 [notice] 4324#0: signal process started
+2013/09/20 12:17:32 [error] 4342#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=4 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/20 12:17:32 [notice] 4358#0: signal process started
+2013/09/20 12:18:22 [error] 4376#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page?N=4 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/09/20 12:18:22 [notice] 4387#0: signal process started
+2013/09/20 12:19:20 [notice] 4416#0: signal process started
+2013/09/20 12:19:35 [notice] 4445#0: signal process started
+2013/09/25 20:32:58 [notice] 3287#0: signal process started
+2013/09/26 13:50:46 [notice] 3282#0: signal process started
+2013/09/26 21:36:23 [notice] 2917#0: signal process started
+2013/09/26 21:37:05 [notice] 2946#0: signal process started
+2013/09/26 21:57:40 [notice] 3079#0: signal process started
+2013/09/26 22:02:28 [notice] 3113#0: signal process started
+2013/09/26 22:07:35 [notice] 3142#0: signal process started
+2013/09/26 22:09:11 [notice] 3194#0: signal process started
+2013/09/26 22:09:31 [notice] 3223#0: signal process started
+2013/09/27 14:47:24 [notice] 3160#0: signal process started
+2013/09/27 14:57:48 [notice] 3215#0: signal process started
+2013/09/27 15:02:27 [notice] 3245#0: signal process started
+2013/09/27 15:03:02 [error] 3263#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: jdclubuntu, request: "GET /page/12 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "localhost"
+2013/09/27 15:03:02 [notice] 3274#0: signal process started
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/09/27 15:21:36 [emerg] 3357#0: still could not bind()
+2013/09/27 15:21:39 [notice] 3370#0: signal process started
+2013/09/27 15:23:41 [notice] 3406#0: signal process started
+2013/09/27 15:25:10 [notice] 3436#0: signal process started
+2013/09/27 15:27:06 [error] 3454#0: *8 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit/5?A=0&V=-1&S=-1"
+2013/09/27 15:27:06 [notice] 3484#0: signal process started
+2013/09/27 15:28:21 [error] 3502#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit/5?A=0&V=-1&S=-1"
+2013/09/27 15:28:56 [notice] 3514#0: signal process started
+2013/09/27 15:34:02 [error] 3537#0: *269 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: jdclubuntu, request: "GET /edit/40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/new"
+2013/09/27 15:34:47 [notice] 3565#0: signal process started
+2013/09/27 15:35:11 [error] 3583#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: jdclubuntu, request: "GET /edit/40 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/new"
+2013/09/27 15:35:11 [notice] 3594#0: signal process started
+2013/10/01 14:36:38 [notice] 3041#0: signal process started
+2013/10/02 11:47:25 [error] 3154#0: *5 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /search?S=What&_charset_=UTF-8 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/5"
+2013/10/02 11:47:25 [notice] 3169#0: signal process started
+2013/10/02 11:59:07 [notice] 4052#0: signal process started
+2013/10/02 12:00:22 [notice] 4081#0: signal process started
+2013/10/02 12:00:32 [notice] 4110#0: signal process started
+2013/10/02 12:00:39 [error] 4128#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /edit/130 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/130"
+2013/10/02 12:02:09 [notice] 4143#0: signal process started
+2013/10/02 12:02:59 [notice] 4172#0: signal process started
+2013/10/02 12:32:46 [notice] 4269#0: signal process started
+2013/10/02 12:35:33 [notice] 4299#0: signal process started
+2013/10/02 12:36:59 [notice] 4334#0: signal process started
+2013/10/02 12:53:57 [error] 4376#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/What+does+Tcl+cost%3F HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/ref/What+does+Tcl+cost%3F"
+2013/10/02 12:53:57 [notice] 4389#0: signal process started
+2013/10/02 12:54:26 [error] 4407#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/What+does+Tcl+cost%3F HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/02 12:54:26 [notice] 4420#0: signal process started
+2013/10/02 13:00:48 [notice] 4457#0: signal process started
+2013/10/02 13:04:07 [notice] 4486#0: signal process started
+2013/10/02 13:37:02 [error] 4561#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET / HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/02 13:37:02 [notice] 4573#0: signal process started
+2013/10/02 13:37:20 [notice] 4602#0: signal process started
+2013/10/02 13:38:58 [notice] 4633#0: signal process started
+2013/10/02 13:41:56 [notice] 4683#0: signal process started
+2013/10/02 13:45:42 [notice] 4718#0: signal process started
+2013/10/02 13:47:17 [notice] 4750#0: signal process started
+2013/10/02 14:11:37 [notice] 4804#0: signal process started
+2013/10/02 14:12:52 [notice] 4833#0: signal process started
+2013/10/02 14:13:59 [error] 4866#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/145?R=0&E=1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/Template%3A%3Acssjs"
+2013/10/02 14:30:56 [notice] 4890#0: signal process started
+2013/10/02 14:35:10 [notice] 4967#0: signal process started
+2013/10/02 14:35:51 [notice] 4998#0: signal process started
+2013/10/02 14:41:06 [notice] 5047#0: signal process started
+2013/10/02 14:42:45 [notice] 5076#0: signal process started
+2013/10/02 14:45:52 [notice] 5106#0: signal process started
+2013/10/02 14:47:03 [notice] 5140#0: signal process started
+2013/10/02 14:47:44 [notice] 5169#0: signal process started
+2013/10/02 14:48:54 [notice] 5198#0: signal process started
+2013/10/02 14:51:57 [notice] 5248#0: signal process started
+2013/10/03 14:28:25 [error] 2773#0: *50 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/39 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/03 14:28:25 [notice] 2790#0: signal process started
+2013/10/03 14:29:56 [notice] 2990#0: signal process started
+2013/10/03 14:32:50 [notice] 3035#0: signal process started
+2013/10/03 14:39:07 [notice] 3188#0: signal process started
+2013/10/03 14:39:30 [notice] 3218#0: signal process started
+2013/10/03 14:39:59 [notice] 3247#0: signal process started
+2013/10/03 14:40:09 [error] 3265#0: *2 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /Home HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/03 14:40:09 [notice] 3276#0: signal process started
+2013/10/03 14:40:26 [notice] 3305#0: signal process started
+2013/10/03 14:42:29 [notice] 3334#0: signal process started
+2013/10/03 14:42:59 [notice] 3363#0: signal process started
+2013/10/03 14:43:08 [notice] 3392#0: signal process started
+2013/10/03 14:43:52 [notice] 3421#0: signal process started
+2013/10/03 14:43:59 [notice] 3450#0: signal process started
+2013/10/03 15:43:47 [notice] 3556#0: signal process started
+2013/10/03 16:02:47 [notice] 3637#0: signal process started
+2013/10/03 16:07:35 [notice] 3680#0: signal process started
+2013/10/03 16:08:50 [notice] 3721#0: signal process started
+2013/10/04 10:43:17 [notice] 3039#0: signal process started
+2013/10/04 10:45:17 [notice] 3068#0: signal process started
+2013/10/04 10:52:20 [notice] 3097#0: signal process started
+2013/10/04 10:54:13 [notice] 3126#0: signal process started
+2013/10/04 11:10:21 [notice] 3176#0: signal process started
+2013/10/04 11:16:10 [error] 3195#0: *3 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /new HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/new"
+2013/10/04 11:16:54 [error] 3195#0: *7 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /nextpage/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/img1"
+2013/10/04 11:17:13 [error] 3195#0: *5 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /nextpage/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/img1"
+2013/10/04 11:17:31 [error] 3195#0: *6 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/26 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 11:18:06 [notice] 3211#0: signal process started
+2013/10/04 11:19:11 [error] 3229#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/26 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 11:47:24 [error] 3229#0: *3 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/b%C3%B5%CA%92u%CB%90%CA%81 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 11:47:32 [notice] 3261#0: signal process started
+2013/10/04 11:48:37 [error] 3279#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/b%C3%B5%CA%92u%CB%90%CA%81 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 12:25:30 [notice] 3322#0: signal process started
+2013/10/04 12:26:06 [notice] 3351#0: signal process started
+2013/10/04 12:33:10 [notice] 3380#0: signal process started
+2013/10/04 13:00:02 [notice] 3435#0: signal process started
+2013/10/04 13:00:10 [notice] 3464#0: signal process started
+2013/10/04 13:00:20 [notice] 3493#0: signal process started
+2013/10/04 13:01:13 [notice] 3522#0: signal process started
+2013/10/04 13:06:44 [notice] 3552#0: signal process started
+2013/10/04 13:07:52 [notice] 3581#0: signal process started
+2013/10/04 13:08:48 [error] 3598#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/Template%3A%3Areadonly?E=1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 13:08:48 [notice] 3610#0: signal process started
+2013/10/04 13:20:11 [notice] 3667#0: signal process started
+2013/10/04 13:20:30 [error] 3685#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/Template%3A%3Areadonly?E=1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 13:20:30 [notice] 3696#0: signal process started
+2013/10/04 13:21:33 [error] 3714#0: *1 upstream timed out (110: Connection timed out) while reading upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/Template%3A%3Areadonly?E=1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 13:23:06 [notice] 3725#0: signal process started
+2013/10/04 13:24:10 [error] 3743#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/Template%3A%3Areadonly?E=1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/04 13:56:08 [notice] 3773#0: signal process started
+2013/10/04 13:56:26 [notice] 3803#0: signal process started
+2013/10/04 13:57:12 [notice] 3832#0: signal process started
+2013/10/04 13:58:12 [notice] 3861#0: signal process started
+2013/10/04 13:58:25 [notice] 3890#0: signal process started
+2013/10/04 13:58:38 [notice] 3919#0: signal process started
+2013/10/04 15:31:04 [notice] 4033#0: signal process started
+2013/10/04 15:31:52 [notice] 4064#0: signal process started
+2013/10/04 15:32:17 [notice] 4078#0: signal process started
+2013/10/04 15:32:17 [error] 4078#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/04 15:32:58 [emerg] 4112#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/04 15:33:00 [notice] 4120#0: signal process started
+2013/10/04 15:33:01 [notice] 4136#0: signal process started
+2013/10/04 15:33:01 [error] 4136#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/04 15:33:41 [notice] 4171#0: signal process started
+2013/10/04 15:36:06 [notice] 4206#0: signal process started
+2013/10/04 15:36:33 [notice] 4241#0: signal process started
+2013/10/04 15:36:51 [notice] 4276#0: signal process started
+2013/10/04 15:38:24 [notice] 4311#0: signal process started
+2013/10/04 16:36:28 [notice] 4389#0: signal process started
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:09:51 [emerg] 3457#0: still could not bind()
+2013/10/07 11:09:57 [notice] 3472#0: signal process started
+2013/10/07 11:10:37 [notice] 3507#0: signal process started
+2013/10/07 11:16:26 [notice] 3546#0: signal process started
+2013/10/07 11:17:04 [notice] 3587#0: signal process started
+2013/10/07 11:23:01 [notice] 3639#0: signal process started
+2013/10/07 11:23:24 [notice] 3674#0: signal process started
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:25:01 [emerg] 3795#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:25:03 [notice] 3803#0: signal process started
+2013/10/07 11:25:25 [notice] 3832#0: signal process started
+2013/10/07 11:25:44 [notice] 3848#0: signal process started
+2013/10/07 11:25:44 [error] 3848#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:26:24 [notice] 3877#0: signal process started
+2013/10/07 11:26:38 [notice] 3907#0: signal process started
+2013/10/07 11:27:57 [notice] 3944#0: signal process started
+2013/10/07 11:27:58 [notice] 3956#0: signal process started
+2013/10/07 11:27:58 [error] 3956#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:27:58 [notice] 3968#0: signal process started
+2013/10/07 11:27:58 [error] 3968#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:27:59 [notice] 3980#0: signal process started
+2013/10/07 11:27:59 [error] 3980#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:27:59 [notice] 3992#0: signal process started
+2013/10/07 11:27:59 [error] 3992#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:27:59 [notice] 4004#0: signal process started
+2013/10/07 11:27:59 [error] 4004#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:28:25 [notice] 4033#0: signal process started
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 11:33:09 [emerg] 4075#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 11:33:10 [notice] 4083#0: signal process started
+2013/10/07 11:33:16 [notice] 4099#0: signal process started
+2013/10/07 11:33:16 [error] 4099#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 11:56:20 [notice] 4185#0: signal process started
+2013/10/07 11:56:26 [notice] 4220#0: signal process started
+2013/10/07 12:27:04 [notice] 4303#0: signal process started
+2013/10/07 12:28:03 [notice] 4339#0: signal process started
+2013/10/07 12:28:47 [notice] 4374#0: signal process started
+2013/10/07 12:29:48 [notice] 4409#0: signal process started
+2013/10/07 12:30:45 [notice] 4445#0: signal process started
+2013/10/07 12:32:03 [notice] 4480#0: signal process started
+2013/10/07 12:34:23 [notice] 4516#0: signal process started
+2013/10/07 12:38:06 [notice] 4552#0: signal process started
+2013/10/07 12:40:23 [notice] 4606#0: signal process started
+2013/10/07 12:41:17 [notice] 4641#0: signal process started
+2013/10/07 12:45:36 [notice] 4681#0: signal process started
+2013/10/07 12:47:42 [notice] 4719#0: signal process started
+2013/10/07 12:48:27 [notice] 4754#0: signal process started
+2013/10/07 13:02:42 [notice] 4795#0: signal process started
+2013/10/07 13:03:26 [notice] 4830#0: signal process started
+2013/10/07 13:04:36 [notice] 4865#0: signal process started
+2013/10/07 13:06:17 [notice] 4900#0: signal process started
+2013/10/07 13:07:03 [notice] 4935#0: signal process started
+2013/10/07 13:07:08 [notice] 4970#0: signal process started
+2013/10/07 13:07:39 [notice] 5006#0: signal process started
+2013/10/07 13:17:20 [notice] 5066#0: signal process started
+2013/10/07 13:19:00 [notice] 5114#0: signal process started
+2013/10/07 13:21:33 [notice] 5149#0: signal process started
+2013/10/07 13:21:59 [notice] 5184#0: signal process started
+2013/10/07 13:22:02 [error] 5206#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /upload/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/img1"
+2013/10/07 13:22:09 [error] 5206#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /upload/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/img1"
+2013/10/07 13:22:40 [notice] 5220#0: signal process started
+2013/10/07 13:22:47 [error] 5242#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload/img1"
+2013/10/07 13:22:53 [error] 5242#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /page/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/07 13:23:00 [notice] 5255#0: signal process started
+2013/10/07 13:25:13 [notice] 5291#0: signal process started
+2013/10/07 13:25:52 [notice] 5326#0: signal process started
+2013/10/07 13:26:01 [error] 5348#0: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: jdclubuntu, request: "POST /write HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost"
+2013/10/07 13:26:34 [error] 5348#0: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: jdclubuntu, request: "POST /write HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost"
+2013/10/07 13:27:57 [notice] 5362#0: signal process started
+2013/10/07 13:27:59 [error] 5384#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /upload/img1 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/page/img1"
+2013/10/07 13:28:06 [notice] 5397#0: signal process started
+2013/10/07 13:28:29 [notice] 5435#0: signal process started
+2013/10/07 13:32:35 [notice] 5472#0: signal process started
+2013/10/07 13:39:57 [notice] 5535#0: signal process started
+2013/10/07 13:48:47 [notice] 5572#0: signal process started
+2013/10/07 13:50:57 [notice] 5609#0: signal process started
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 14:48:03 [emerg] 5723#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 14:48:04 [notice] 5731#0: signal process started
+2013/10/07 14:48:05 [notice] 5747#0: signal process started
+2013/10/07 14:48:05 [error] 5747#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 15:05:54 [notice] 5809#0: signal process started
+2013/10/07 15:07:07 [notice] 5844#0: signal process started
+2013/10/07 15:08:58 [notice] 5880#0: signal process started
+2013/10/07 15:10:42 [notice] 5934#0: signal process started
+2013/10/07 15:11:42 [notice] 5969#0: signal process started
+2013/10/07 15:12:42 [notice] 6004#0: signal process started
+2013/10/07 15:13:07 [notice] 6040#0: signal process started
+2013/10/07 15:16:56 [notice] 6075#0: signal process started
+2013/10/07 15:17:18 [notice] 6115#0: signal process started
+2013/10/07 15:22:52 [notice] 6155#0: signal process started
+2013/10/07 15:31:56 [notice] 6204#0: signal process started
+2013/10/07 15:45:01 [notice] 6268#0: signal process started
+2013/10/07 15:46:16 [notice] 6303#0: signal process started
+2013/10/07 15:49:11 [notice] 6339#0: signal process started
+2013/10/07 15:50:01 [notice] 6374#0: signal process started
+2013/10/07 15:50:20 [notice] 6409#0: signal process started
+2013/10/07 15:51:18 [notice] 6444#0: signal process started
+2013/10/07 15:52:27 [notice] 6479#0: signal process started
+2013/10/07 15:54:20 [notice] 6515#0: signal process started
+2013/10/07 15:56:14 [notice] 6550#0: signal process started
+2013/10/07 15:58:37 [notice] 6586#0: signal process started
+2013/10/07 16:07:40 [notice] 6623#0: signal process started
+2013/10/07 16:11:29 [notice] 6683#0: signal process started
+2013/10/07 16:13:32 [notice] 6720#0: signal process started
+2013/10/07 16:15:13 [notice] 6757#0: signal process started
+2013/10/07 16:16:20 [notice] 6793#0: signal process started
+2013/10/07 16:29:29 [notice] 6845#0: signal process started
+2013/10/07 16:32:46 [notice] 6880#0: signal process started
+2013/10/07 16:34:41 [notice] 6916#0: signal process started
+2013/10/07 16:35:28 [notice] 6951#0: signal process started
+2013/10/07 16:37:39 [notice] 6986#0: signal process started
+2013/10/07 16:38:44 [notice] 7022#0: signal process started
+2013/10/07 16:39:52 [notice] 7076#0: signal process started
+2013/10/07 16:40:47 [notice] 7111#0: signal process started
+2013/10/07 16:41:32 [notice] 7146#0: signal process started
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/07 19:56:26 [emerg] 2872#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/07 19:56:28 [notice] 2880#0: signal process started
+2013/10/07 19:56:32 [notice] 2896#0: signal process started
+2013/10/07 19:56:32 [error] 2896#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/07 19:59:21 [notice] 3019#0: signal process started
+2013/10/07 20:00:10 [notice] 3054#0: signal process started
+2013/10/07 20:01:41 [notice] 3091#0: signal process started
+2013/10/07 20:02:10 [notice] 3126#0: signal process started
+2013/10/07 20:04:53 [notice] 3161#0: signal process started
+2013/10/07 20:05:58 [notice] 3199#0: signal process started
+2013/10/08 16:17:34 [notice] 3368#0: signal process started
+2013/10/08 16:17:34 [error] 3368#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/08 16:17:38 [notice] 3403#0: signal process started
+2013/10/08 16:53:55 [error] 3425#0: *29 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /rename/o+%CA%81%C9%99vwa%CB%90%CA%81 HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:80 failed (98: Address already in use)
+2013/10/08 16:54:01 [emerg] 3515#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2013/10/08 16:54:02 [notice] 3523#0: signal process started
+2013/10/08 16:54:03 [notice] 3539#0: signal process started
+2013/10/08 16:54:03 [error] 3539#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/08 16:54:06 [notice] 3574#0: signal process started
+2013/10/08 16:55:10 [notice] 3609#0: signal process started
+2013/10/08 16:55:44 [notice] 3645#0: signal process started
+2013/10/08 16:59:05 [notice] 3680#0: signal process started
+2013/10/08 17:02:10 [notice] 3717#0: signal process started
+2013/10/08 17:03:53 [notice] 3752#0: signal process started
+2013/10/08 17:05:12 [notice] 3787#0: signal process started
+2013/10/08 17:05:39 [notice] 3823#0: signal process started
+2013/10/08 17:06:11 [notice] 3858#0: signal process started
+2013/10/09 09:35:08 [notice] 3012#0: signal process started
+2013/10/09 09:35:08 [error] 3012#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/09 09:35:13 [notice] 3047#0: signal process started
+2013/10/09 09:40:16 [notice] 3102#0: signal process started
+2013/10/09 09:42:07 [notice] 3137#0: signal process started
+2013/10/09 09:43:41 [notice] 3173#0: signal process started
+2013/10/09 09:43:44 [notice] 3208#0: signal process started
+2013/10/09 09:44:38 [notice] 3243#0: signal process started
+2013/10/09 09:45:05 [notice] 3278#0: signal process started
+2013/10/09 09:45:07 [error] 3300#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /recent HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/09 09:45:10 [notice] 3313#0: signal process started
+2013/10/09 09:46:48 [notice] 3349#0: signal process started
+2013/10/09 09:48:28 [notice] 3385#0: signal process started
+2013/10/09 09:48:55 [notice] 3420#0: signal process started
+2013/10/09 09:49:58 [notice] 3455#0: signal process started
+2013/10/09 09:51:20 [notice] 3490#0: signal process started
+2013/10/09 09:51:54 [notice] 3526#0: signal process started
+2013/10/09 09:52:01 [error] 3548#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "POST /save HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/edit/a1s2d3"
+2013/10/09 09:52:05 [notice] 3561#0: signal process started
+2013/10/09 09:54:05 [notice] 3597#0: signal process started
+2013/10/09 09:56:32 [notice] 3637#0: signal process started
+2013/10/09 09:57:41 [notice] 3679#0: signal process started
+2013/10/09 10:05:46 [notice] 3725#0: signal process started
+2013/10/09 10:08:10 [notice] 3768#0: signal process started
+2013/10/09 10:17:19 [notice] 3834#0: signal process started
+2013/10/09 10:37:56 [notice] 3874#0: signal process started
+2013/10/09 10:39:46 [notice] 3931#0: signal process started
+2013/10/09 10:41:12 [notice] 3966#0: signal process started
+2013/10/09 10:43:16 [notice] 4002#0: signal process started
+2013/10/09 10:44:19 [notice] 4037#0: signal process started
+2013/10/09 10:45:22 [notice] 4072#0: signal process started
+2013/10/09 10:45:43 [notice] 4107#0: signal process started
+2013/10/09 10:47:18 [notice] 4142#0: signal process started
+2013/10/09 10:48:50 [notice] 4178#0: signal process started
+2013/10/09 10:53:38 [notice] 4234#0: signal process started
+2013/10/09 10:54:28 [notice] 4269#0: signal process started
+2013/10/09 10:59:24 [notice] 4307#0: signal process started
+2013/10/09 11:01:08 [notice] 4342#0: signal process started
+2013/10/09 11:01:43 [notice] 4377#0: signal process started
+2013/10/09 11:09:41 [notice] 4433#0: signal process started
+2013/10/09 11:15:27 [notice] 4473#0: signal process started
+2013/10/09 11:16:40 [notice] 4508#0: signal process started
+2013/10/09 11:21:06 [notice] 4554#0: signal process started
+2013/10/09 11:21:32 [notice] 4589#0: signal process started
+2013/10/09 11:24:18 [notice] 4636#0: signal process started
+2013/10/09 11:25:49 [notice] 4671#0: signal process started
+2013/10/09 11:43:13 [notice] 4743#0: signal process started
+2013/10/09 11:43:20 [error] 4765#0: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcwriter HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/09 11:44:44 [notice] 4779#0: signal process started
+2013/10/09 11:44:47 [notice] 4814#0: signal process started
+2013/10/09 11:46:24 [notice] 4850#0: signal process started
+2013/10/09 11:47:04 [notice] 4886#0: signal process started
+2013/10/09 12:59:06 [notice] 5001#0: signal process started
+2013/10/09 13:00:25 [notice] 5036#0: signal process started
+2013/10/09 13:24:31 [notice] 5125#0: signal process started
+2013/10/09 14:58:56 [notice] 5251#0: signal process started
+2013/10/09 14:59:00 [notice] 5286#0: signal process started
+2013/10/09 14:59:46 [notice] 5322#0: signal process started
+2013/10/09 15:00:26 [notice] 5357#0: signal process started
+2013/10/09 15:00:46 [notice] 5392#0: signal process started
+2013/10/09 15:02:43 [notice] 5427#0: signal process started
+2013/10/09 15:09:42 [notice] 5483#0: signal process started
+2013/10/09 15:11:53 [notice] 5518#0: signal process started
+2013/10/09 15:14:08 [notice] 5553#0: signal process started
+2013/10/09 15:48:47 [notice] 5648#0: signal process started
+2013/10/09 15:52:18 [notice] 5684#0: signal process started
+2013/10/09 15:53:23 [notice] 5719#0: signal process started
+2013/10/09 15:54:44 [notice] 5757#0: signal process started
+2013/10/09 16:12:07 [notice] 5815#0: signal process started
+2013/10/09 16:39:32 [notice] 5886#0: signal process started
+2013/10/09 17:00:12 [notice] 5956#0: signal process started
+2013/10/09 17:01:44 [notice] 5991#0: signal process started
+2013/10/10 09:05:03 [notice] 3044#0: signal process started
+2013/10/10 09:05:03 [error] 3044#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/10 09:05:21 [error] 3065#0: *11 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcpagecreator HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 09:06:00 [error] 3065#0: *60 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcpagecreator HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 09:06:13 [error] 3065#0: *65 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcpagecreator HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 09:06:29 [error] 3065#0: *75 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcwriter HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 09:06:41 [notice] 3079#0: signal process started
+2013/10/10 09:37:01 [notice] 3150#0: signal process started
+2013/10/10 09:39:20 [notice] 3205#0: signal process started
+2013/10/10 09:43:31 [notice] 3242#0: signal process started
+2013/10/10 09:47:33 [notice] 3277#0: signal process started
+2013/10/10 09:49:35 [notice] 3313#0: signal process started
+2013/10/10 09:49:45 [notice] 3348#0: signal process started
+2013/10/10 09:52:53 [notice] 3383#0: signal process started
+2013/10/10 10:59:34 [notice] 3486#0: signal process started
+2013/10/10 11:00:17 [notice] 3521#0: signal process started
+2013/10/10 11:00:20 [notice] 3556#0: signal process started
+2013/10/10 11:13:25 [notice] 3614#0: signal process started
+2013/10/10 11:37:55 [notice] 3666#0: signal process started
+2013/10/10 11:43:37 [notice] 3722#0: signal process started
+2013/10/10 12:55:47 [notice] 3837#0: signal process started
+2013/10/10 12:58:24 [notice] 3889#0: signal process started
+2013/10/10 12:58:36 [notice] 3913#0: signal process started
+2013/10/10 12:58:36 [error] 3913#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/10 13:05:17 [notice] 3950#0: signal process started
+2013/10/10 14:04:23 [notice] 4045#0: signal process started
+2013/10/10 14:10:09 [notice] 4110#0: signal process started
+2013/10/10 14:11:17 [notice] 4145#0: signal process started
+2013/10/10 14:12:43 [notice] 4180#0: signal process started
+2013/10/10 14:26:29 [notice] 4230#0: signal process started
+2013/10/10 14:31:54 [notice] 4273#0: signal process started
+2013/10/10 14:34:06 [notice] 4308#0: signal process started
+2013/10/10 14:35:22 [notice] 4344#0: signal process started
+2013/10/10 14:38:00 [notice] 4379#0: signal process started
+2013/10/10 14:38:20 [error] 4400#0: *24 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcupdateruser HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 14:38:27 [error] 4400#0: *29 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcupdateruser HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/10 14:38:35 [notice] 4414#0: signal process started
+2013/10/10 15:16:38 [notice] 4507#0: signal process started
+2013/10/10 15:19:14 [notice] 4547#0: signal process started
+2013/10/10 15:19:41 [notice] 4583#0: signal process started
+2013/10/10 15:21:52 [notice] 4619#0: signal process started
+2013/10/10 15:24:32 [notice] 4662#0: signal process started
+2013/10/10 15:26:14 [notice] 4697#0: signal process started
+2013/10/11 13:38:27 [notice] 3132#0: signal process started
+2013/10/11 13:38:27 [error] 3132#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/11 13:38:34 [notice] 3167#0: signal process started
+2013/10/11 13:40:31 [notice] 3222#0: signal process started
+2013/10/11 14:34:54 [notice] 3551#0: signal process started
+2013/10/11 14:36:42 [notice] 3595#0: signal process started
+2013/10/11 14:39:29 [notice] 3654#0: signal process started
+2013/10/11 14:39:41 [notice] 3673#0: signal process started
+2013/10/11 14:39:41 [error] 3673#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/11 14:43:36 [notice] 3708#0: signal process started
+2013/10/11 14:48:17 [notice] 3744#0: signal process started
+2013/10/11 14:49:12 [notice] 3768#0: signal process started
+2013/10/11 14:49:12 [error] 3768#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/11 14:52:04 [notice] 3804#0: signal process started
+2013/10/11 14:52:07 [notice] 3820#0: signal process started
+2013/10/11 14:52:07 [error] 3820#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/11 14:54:20 [notice] 3854#0: signal process started
+2013/10/11 14:54:20 [error] 3854#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/11 15:48:19 [notice] 3960#0: signal process started
+2013/10/11 15:55:54 [notice] 3997#0: signal process started
+2013/10/11 16:13:21 [notice] 4065#0: signal process started
+2013/10/11 16:22:54 [notice] 4113#0: signal process started
+2013/10/11 16:23:37 [notice] 4148#0: signal process started
+2013/10/11 16:25:22 [notice] 4189#0: signal process started
+2013/10/11 16:30:47 [notice] 4225#0: signal process started
+2013/10/15 12:37:26 [notice] 3044#0: signal process started
+2013/10/15 12:37:26 [error] 3044#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/15 12:37:54 [error] 3065#0: *24 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcupdaterusersid HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/15 12:37:57 [error] 3065#0: *28 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcupdaterusersid HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/15 12:38:26 [error] 3065#0: *32 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "POST /rpcupdaterusersid HTTP/1.1", upstream: "scgi://127.0.0.1:9998", host: "localhost:8009"
+2013/10/15 12:49:36 [notice] 3103#0: signal process started
+2013/10/15 12:52:15 [notice] 3139#0: signal process started
+2013/10/15 12:53:28 [notice] 3175#0: signal process started
+2013/10/15 14:56:19 [notice] 2744#0: signal process started
+2013/10/15 14:56:19 [error] 2744#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/10/15 14:56:28 [notice] 2783#0: signal process started
+2013/10/24 10:14:05 [error] 3214#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.30.234, server: jdclubuntu, request: "GET /brol HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu"
+2013/10/24 10:14:13 [notice] 3222#0: signal process started
+2013/10/24 10:17:01 [notice] 3264#0: signal process started
+2013/10/24 10:17:30 [notice] 3305#0: signal process started
+2013/10/24 10:18:29 [notice] 3340#0: signal process started
+2013/10/24 10:20:13 [notice] 3375#0: signal process started
+2013/10/24 10:25:52 [emerg] 3430#0: BIO_new_file("/home/decoster/nikit3/nginx/ssl/server.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/home/decoster/nikit3/nginx/ssl/server.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2013/10/24 10:25:53 [emerg] 3445#0: BIO_new_file("/home/decoster/nikit3/nginx/ssl/server.crt") failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/home/decoster/nikit3/nginx/ssl/server.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2013/10/31 15:56:31 [notice] 4387#0: signal process started
+2013/10/31 15:56:31 [error] 4387#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/11/07 10:47:52 [notice] 3123#0: signal process started
+2013/11/07 10:47:52 [error] 3123#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/11/07 10:52:16 [notice] 3163#0: signal process started
+2013/11/07 10:53:00 [notice] 3198#0: signal process started
+2013/11/07 10:53:36 [notice] 3233#0: signal process started
+2013/11/12 10:08:46 [notice] 3062#0: signal process started
+2013/11/12 10:08:46 [error] 3062#0: open() "/home/decoster/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2013/11/12 10:08:58 [notice] 3108#0: signal process started
+2013/11/12 10:09:14 [notice] 3162#0: signal process started
+2014/02/17 22:11:08 [notice] 4459#0: signal process started
+2014/02/17 22:33:46 [notice] 4733#0: signal process started
+2014/02/17 22:35:07 [notice] 4777#0: signal process started
+2014/10/02 23:01:37 [emerg] 30464#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:02:40 [emerg] 30485#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:03:35 [emerg] 30501#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:04:08 [emerg] 30514#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:04:10 [emerg] 30527#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:06:30 [emerg] 30548#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:06:38 [emerg] 30561#0: open() "/etc/nginx/mime.types" failed (2: No such file or directory) in /home/jdc/nikit3/nginx/nginx.conf:25
+2014/10/02 23:08:11 [emerg] 30579#0: the "ssl" parameter requires ngx_http_ssl_module in /home/jdc/nikit3/nginx/sites-enabled/default:25
+2014/10/02 23:08:15 [emerg] 30592#0: the "ssl" parameter requires ngx_http_ssl_module in /home/jdc/nikit3/nginx/sites-enabled/default:25
+2014/10/02 23:08:47 [emerg] 30605#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:08:48 [emerg] 30618#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:22 [emerg] 30646#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:25 [emerg] 30659#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:28 [emerg] 30672#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:37 [emerg] 30684#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:42 [emerg] 30697#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:13:43 [emerg] 30710#0: unknown directive "ssl_protocols" in /home/jdc/nikit3/nginx/sites-enabled/default:27
+2014/10/02 23:14:29 [notice] 30725#0: signal process started
+2014/10/02 23:14:29 [error] 30725#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/02 23:24:38 [emerg] 30796#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/02 23:24:41 [notice] 30802#0: signal process started
+2014/10/02 23:24:42 [notice] 30816#0: signal process started
+2014/10/02 23:24:42 [error] 30816#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/02 23:30:01 [notice] 30850#0: signal process started
+2014/10/05 23:09:02 [emerg] 21692#0: the "ssl" parameter requires ngx_http_ssl_module in /home/jdc/nikit3/nginx/sites-enabled/default:25
+2014/10/05 23:09:05 [emerg] 21705#0: the "ssl" parameter requires ngx_http_ssl_module in /home/jdc/nikit3/nginx/sites-enabled/default:25
+2014/10/05 23:19:00 [notice] 9072#0: signal process started
+2014/10/05 23:19:00 [error] 9072#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/05 23:19:06 [notice] 9103#0: signal process started
+2014/10/05 23:19:24 [notice] 9134#0: signal process started
+2014/10/05 23:19:34 [notice] 9149#0: signal process started
+2014/10/05 23:19:34 [error] 9149#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/05 23:30:02 [notice] 9480#0: signal process started
+2014/10/06 22:36:14 [notice] 1945#0: signal process started
+2014/10/06 22:44:43 [notice] 2013#0: signal process started
+2014/10/06 22:54:55 [notice] 2471#0: signal process started
+2014/10/06 23:03:35 [error] 2524#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: xubuntu1310-2, request: "GET /page/LV HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "xubuntu1310-2", referrer: "https://xubuntu1310-2/revision/GHQ%2Ecom?V=13"
+2014/10/06 23:14:37 [error] 2524#0: *93 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: xubuntu1310-2, request: "GET /page/ HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "xubuntu1310-2"
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8000 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:443 failed (98: Address already in use)
+2014/10/06 23:14:47 [emerg] 2625#0: bind() to 0.0.0.0:8009 failed (98: Address already in use)
+2014/10/06 23:14:49 [notice] 2631#0: signal process started
+2014/10/06 23:14:52 [notice] 2645#0: signal process started
+2014/10/06 23:14:52 [error] 2645#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/06 23:20:51 [notice] 2726#0: signal process started
+2014/10/06 23:21:59 [error] 2744#0: *2 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: xubuntu1310-2, request: "GET /LV HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "xubuntu1310-2"
+2014/10/06 23:23:13 [notice] 2761#0: signal process started
+2014/10/06 23:25:19 [notice] 2795#0: signal process started
+2014/10/06 23:26:25 [error] 2814#0: *1 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: xubuntu1310-2, request: "GET /LV HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "xubuntu1310-2"
+2014/10/06 23:26:46 [notice] 2831#0: signal process started
+2014/10/06 23:27:06 [notice] 2865#0: signal process started
+2014/10/06 23:28:32 [notice] 2880#0: signal process started
+2014/10/06 23:28:32 [error] 2880#0: open() "/home/jdc/nikit3/nginx/run/nginx.pid" failed (2: No such file or directory)
+2014/10/06 23:28:40 [notice] 2912#0: signal process started
+2014/10/06 23:30:38 [notice] 2954#0: signal process started
+2014/10/06 23:32:49 [notice] 2996#0: signal process started
+2014/10/06 23:34:08 [notice] 3027#0: signal process started
+2014/10/06 23:34:43 [notice] 3068#0: signal process started
+2014/10/06 23:40:00 [notice] 3102#0: signal process started
+2014/10/06 23:40:53 [notice] 3150#0: signal process started
+2014/10/06 23:44:07 [notice] 3187#0: signal process started
+2014/10/06 23:53:11 [notice] 3242#0: signal process started

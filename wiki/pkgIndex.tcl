@@ -1,0 +1,6 @@
+package ifneeded scgi          1.0.0 [list source [file join $dir scgi.tcl]]
+package ifneeded nscgi         2.0.0 [list source [file join $dir nscgi.tcl]]
+package ifneeded SCGIWiki      1.0.0 [list source [file join $dir SCGIWiki.tcl]]
+package ifneeded Wiki          1.0.0 [list source [file join $dir Wiki.tcl]]
+package ifneeded WikiUtils     1.0.0 [list source [file join $dir WikiUtils.tcl]]
+package ifneeded MkUp          1.0.0 [list source [file join $dir mkup.tcl]]

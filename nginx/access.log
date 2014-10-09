@@ -1,0 +1,2 @@
+192.168.30.223 - - [06/Aug/2013:12:58:07 +0200] "GET /saveupload HTTP/1.1" 200 137 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36"
+192.168.30.223 - - [06/Aug/2013:12:58:16 +0200] "POST /saveupload HTTP/1.1" 502 574 "http://jdclubuntu/upload?N=40" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36"

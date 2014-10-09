@@ -1,0 +1,15 @@
+#!/bin/bash
+
+dir=$(pwd $(dirname $0))
+
+if [[ -z "$NGINXPATH" ]] ; then
+    if [ -x /usr/local/sbin/nginx ] ; then
+	NGINXPATH=/usr/local/sbin/nginx
+    else
+	NGINXPATH=nginx
+    fi
+fi
+
+sudo $NGINXPATH -p $dir/nginx -c $dir/nginx/nginx.conf $flags -s stop
+kill $(ps ax | grep run_scgi_wiki | awk '{print $1 ; exit}' -)
+kill $(ps ax | grep run_scgi_wiki | awk '{print $1 ; exit}' -)
