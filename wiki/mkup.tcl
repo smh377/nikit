@@ -142,10 +142,10 @@ oo::class create MkUp {
     method LineType {line} {
 	if {[regexp {^###(.*)$} $line -> data]} { return [list {type COMMENT data "" code $data}] }
 	if {$code_block} {
-	    if {[regexp {^======[^=]*$} $line]} { return [list {type CODE data ""}] }
+	    if {[regexp {^======[^=]*.*$} $line]} { return [list {type CODE data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$fixed_block} {
-	    if {[regexp {^===[^=]*$} $line]} { return [list {type FIXED data ""}] }
+	    if {[regexp {^===[^=]*.*$} $line]} { return [list {type FIXED data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$html_block} {
 	    if {[regexp {^<<inlinehtml>>$} $line]} { return [list {type HTML data ""}] }
@@ -157,7 +157,7 @@ oo::class create MkUp {
 	} else {
 	    if {[string length $line] == 0} { return [list {type EMPTY data ""}] }
 	    if {[regexp {^\-\-\-\-[\-]*$} $line]} { return [list {type HR data ""}] }
-	    if {[regexp {^======(.*)$} $line -> data]} {
+	    if {[regexp {^======([^=]*.*)$} $line -> data]} {
 		if {[string length $data] == 0} {
 		    set data sh_tcl
 		} elseif {$data in {c tcl}} {
@@ -168,7 +168,7 @@ oo::class create MkUp {
 		return [list [dict create type CODE data "" code $data]]
 	    }
 	    if {[regexp {^\!\!\!\!\!\!$} $line]} { return [list [dict create type CENTER data ""]] }
-	    if {[regexp {^===(.*)$} $line -> data]} { return [list {type FIXED data "" code $data}] }
+	    if {[regexp {^===([^=]*.*)$} $line -> data]} { return [list {type FIXED data "" code $data}] }
 	    if {$allow_inline_html && [regexp {^<<inlinehtml>>$} $line]} { return [list [dict create type HTML data ""]] }
 	    if {[regexp {^<<toc>>$} $line]} { return [list [dict create type TOC data ""]] }
 	    if {[regexp {^<<categories>>(.*)$} $line -> links]} { return [list [dict create type CAT links $links data ""]] }
