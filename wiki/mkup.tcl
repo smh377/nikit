@@ -9,11 +9,12 @@ oo::class create MkUp {
     variable allow_include allow_inline_html backrefs backrefs_link_command category_link_command center code_block \
 	discussion discussion_count fixed_block h1_data h1_sections html html_block include_id includes insdelcnt \
 	internal_link_command link_id lstack ltype options_block references row_count section_edit_link_command state \
-	table toc
+	table toc line_render_loop_limit
 
     constructor {args} {
 	set allow_include 1
 	set allow_inline_html 1
+	set line_render_loop_limit 16
 #	set backrefs_link_command {}
 #	set category_link_command {}
 #	set internal_link_command {}
@@ -58,13 +59,14 @@ oo::class create MkUp {
 	set data [my init $data]
 	foreach line [split $data \n] {
 	    foreach ltype [my LineType $line] {
-		if {[dict get $ltype type] eq "H1" && [llength $h1_data]} {
+		set ctype [dict get $ltype type]
+		if {$ctype eq "H1" && [llength $h1_data]} {
 		    lappend h1_sections [join $h1_data \n]
 		    set h1_data {}
 		}
-		if {[dict get $ltype type] ne "COMMENT"} {
-		    my NextState [dict get $ltype type]
-		    if {$code_block} {
+		if {$ctype ne "COMMENT"} {
+		    my NextState $ctype
+		    if {$code_block || $ctype eq "PRE"} {
 			append html [html::html_entities [dict get $ltype data]]
 		    } elseif {$html_block} {
 			append html [dict get $ltype data]
@@ -77,7 +79,13 @@ oo::class create MkUp {
 	}
 	my NextState END
 	if {[llength $h1_data]} { lappend h1_sections [join $h1_data \n] }
-	if {[llength $toc]} { my InsertToc }
+	if {[llength $toc]} {
+	    my InsertToc allow_inline_html $allow_inline_html \
+		backrefs_link_command $backrefs_link_command \
+		category_link_command $category_link_command \
+		internal_link_command $internal_link_command \
+		section_edit_link_command $section_edit_link_command
+	}
 	return $html
     }
 
@@ -134,10 +142,10 @@ oo::class create MkUp {
     method LineType {line} {
 	if {[regexp {^###(.*)$} $line -> data]} { return [list {type COMMENT data "" code $data}] }
 	if {$code_block} {
-	    if {[regexp {^======\s*$} $line]} { return [list {type CODE data ""}] }
+	    if {[regexp {^======[^=]*$} $line]} { return [list {type CODE data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$fixed_block} {
-	    if {[regexp {^===\s*$} $line]} { return [list {type FIXED data ""}] }
+	    if {[regexp {^===[^=]*$} $line]} { return [list {type FIXED data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$html_block} {
 	    if {[regexp {^<<inlinehtml>>$} $line]} { return [list {type HTML data ""}] }
@@ -210,8 +218,8 @@ oo::class create MkUp {
     }
 
     method RenderLine {line} {
-	puts $line
 	# Detect markup
+	regsub -all {\\\[} $line "\uFDE0" line
 	regsub -all {\[\[} $line "\uFDDF" line
 	set linkre1 {\[(https?|ftp|news|mailto|file|irc):([^\s:]\S*[^\]\)\s\.,!\?;:'>"])\]} ; # "
 	set linkre2 {(https?|ftp|news|mailto|file|irc):([^\s:][^\s%]*[^\]\)\s\.,!\?;:'>"])%\|%([^%]+)%\|%} ; # "
@@ -223,6 +231,7 @@ oo::class create MkUp {
 	    set brefs($r) $name
 	    regsub {\[backrefs:([^\]]+)\]} $line "\uFDDD$r\uFDD8\\1\uFDDD" line
 	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
         set r 0
         while {[regexp {\[([^\]]+)\]} $line -> lname]} {
@@ -234,6 +243,7 @@ oo::class create MkUp {
 	    regsub {\[([^\]]+)\]} $line "\uFDDA$r\uFDD8$dname\uFDDA" line
 	    set line [string map [list \uFDDB &] $line]
 	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
 	regsub -all $linkre2 $line "\uFDD6\\1\uFDD8\\2\uFDD8\\3\uFDD6" line
 	regsub -all $linkre3 $line "\uFDD7\\1\uFDD8\\2\uFDD8\\1\uFDD8\\2\uFDD7" line
@@ -252,12 +262,16 @@ oo::class create MkUp {
 	regsub -all {\uFDD2([^\uFDD2]+)\uFDD2} $line "<span class='mkup_tt'>\\1</span>" line
 	regsub -all {\uFDD3} $line "<br class='mkup_br'>" line
 	regsub -all {\uFDD4} $line "&nbsp;" line
+	set r 0
         while {[regexp {\uFDD5([^\uFDD5\uFDD8]+)\uFDD8([^\uFDD5\uFDD8]+)\uFDD5} $line]} {
 	    regsub {\uFDD5([^\uFDD5\uFDD8]+)\uFDD8([^\uFDD5\uFDD8]+)\uFDD5} $line "\[<a class='mkup_a' href='\\1:\\2'>[incr link_id]</a>\]" line
+	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
 	regsub -all {\uFDD6([^\uFDD6\uFDD8]+)\uFDD8([^\uFDD6\uFDD8]+)\uFDD8([^\uFDD6\uFDD8]+)\uFDD6} $line "<a class='mkup_a' href='\\1:\\2'>\\3</a>" line
 	regsub -all {\uFDD7([^\uFDD7\uFDD8]+)\uFDD8([^\uFDD7\uFDD8]+)\uFDD8([^\uFDD7\uFDD8]+)\uFDD8([^\uFDD7\uFDD8]+)\uFDD7} $line "<a class='mkup_a' href='\\1:\\2'>\\3:\\4</a>" line
 	regsub -all {\uFDDC([^\uFDDC\uFDD8]+)\uFDD8([^\uFDDC\uFDD8]+)\uFDDC} $line "<a class='mkup_a' href='\\1'>\\2</a>" line
+	set r 0
         while {[regexp {\uFDDA([^\uFDDA\uFDD8]+)\uFDD8([^\uFDDA\uFDD8]+)\uFDDA} $line -> r name]} {
 	    set lnkd [{*}$internal_link_command $refs($r)]
 	    if {[string length [dict get $lnkd link]]} {
@@ -273,7 +287,10 @@ oo::class create MkUp {
 	    } else {
 		regsub {\uFDDA([^\uFDDA\uFDD8]+)\uFDD8([^\uFDDA\uFDD8]+)\uFDDA} $line "\\2" line
 	    }
+	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
+	set r 0
         while {[regexp {\uFDDD([^\uFDDD\uFDD8]+)\uFDD8([^\uFDDD\uFDD8]+)\uFDDD} $line -> r name]} {
 	    set lnk [{*}$backrefs_link_command $brefs($r)]
 	    if {[string length $lnk]} {
@@ -281,10 +298,13 @@ oo::class create MkUp {
 	    } else {
 		regsub {\uFDDD([^\uFDDD\uFDD8]+)\uFDD8([^\uFDDD\uFDD8]+)\uFDDD} $line "\\2" line
 	    }
+	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
 	regsub -all {\uFDD8} $line ":" line
         regsub -all {\uFDDF} $line "\[" line
         regsub -all {\]\]} $line "\]" line
+        regsub -all {\uFDE0} $line "\\\[" line
 	return $line
     }
 
@@ -295,11 +315,17 @@ oo::class create MkUp {
 	# Armour data
 	set line [html::html_entities $line]
 	# Insert rendering
+	set r 0
 	while {[regexp {\uFDD0([^\uFDD0]+)\uFDD0} $line]} {
 	    regsub {\uFDD0([^\uFDD0]+)\uFDD0} $line "<ins class='mkup_diffnew' id='diff[incr insdelcnt]'>\\1</ins>" line
+	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
+	set r 0
 	while {[regexp {\uFDD1([^\uFDD1]+)\uFDD1} $line]} {
 	    regsub {\uFDD1([^\uFDD1]+)\uFDD1} $line "<del class='mkup_diffold' id='diff[incr insdelcnt]'>\\1</del>" line
+	    incr r
+	    if {$r > $line_render_loop_limit} break
 	}
 	return $line
     }
@@ -318,13 +344,13 @@ oo::class create MkUp {
 	return [sha2::sha256 $id]
     }
 
-    method InsertToc {} {
+    method InsertToc {args} {
 	if {[llength $toc]} {
 	    set txt ""
 	    foreach d $toc {
 		append txt "   " [string repeat "*" [dict get $d type]] " " toc:\#[dict get $d id]%|%[dict get $d data]%|% \n
 	    }
-	    set m [MkUp new]
+	    set m [MkUp new {*}$args]
 	    set html_toc [$m render $txt]
 	    $m destroy
 	} else {
