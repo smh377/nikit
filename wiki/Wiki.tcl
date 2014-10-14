@@ -233,7 +233,7 @@ oo::class create Wiki {
     }
 
     method menuLI {{l {}} {add_hr 1}} {
-	set ml [my menus Home Recent Help WhoAmI Session New Random]
+	set ml [my menus Recent New Random]
 	if {[llength $l]} {
 	    if {$add_hr} {
 		lappend ml {*}[my menus HR]
@@ -828,7 +828,8 @@ oo::class create Wiki {
 	    lappend menu [my aTag <a> rel nofollow href /previouspage/[$cgi encode $name] "Previous page"]
 	    lappend menu [my aTag <a> rel nofollow href /nextpage/[$cgi encode $name] "Next page"]
 	    lappend menu {*}[my menus HR]
-	    lappend menu "[my aTag <a> rel nofollow href /edit/[$cgi encode $name] Edit]/[my aTag <a> rel nofollow href /editarea/[$cgi encode $name] Access]"
+	    lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name] Edit]
+	    lappend menu [my aTag <a> rel nofollow href /editarea/[$cgi encode $name] Access]
 	    lappend menu [my aTag <a> rel nofollow href /upload/[$cgi encode $name] Upload]
 	    lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name]?A=1 Comment]
 	    lappend menu [my aTag <a> rel nofollow href /history/[$cgi encode $name] History]
