@@ -417,57 +417,93 @@ ${Content}
 
 ################################################################################
 
-    set page {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>${HeaderTitle}</title>
-<<include:TEMPLATE:cssjs>>
-</head>
-<body onload='sh_highlightDocument();hide_discussions();'>
-<div class='container'>
-  <div class='header'>
-    <div class='logo'><a href='http://wiki.tcl.tk' class='logo'>wiki.tcl.tk</a><img class='logo' alt='' src='/plume.png'></div>
-    <div id='title' class='title'>${PageTitle}</div>
-    <div id='updated' class='updated'>${SubTitle}</div>
-  </div>
-  <div id='wrapper'>
-    <div id='content'>
-${Content}
+    set page {<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>${HeaderTitle}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/css/sh_style.css' type='text/css'>}
+
+    <!-- Custom styles for this template -->
+    <link href="/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body onload='sh_highlightDocument();'>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Tclers Wiki</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/whoami">Who am I?</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/session">Session</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" method='get' action='/search' id='searchform'>
+            <input name="S" type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
     </div>
-  </div>
-  <div id='menu_area'>
-    <div id='wiki_menu'>
-      <ul id='menu'>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
 ${Menu}
-      </ul>
-    </div>
-    <form method='get' action='/search' id='searchform'><input id='searchtxt' onfocus='clearSearch();' onblur='setSearch();' name='S' type='text' value='Search' tabindex='1'>
-      <input name='_charset_' type='hidden' value='' tabindex='2'>
-    </form>
-    <div class='navigation'>
-      <div id='page_toc'>
-${TOC}
-      </div>
-    </div>
-    <div class='extra'>
-      <div id='wiki_toc'>
-        <div class='toc1'>M1
-          <div class='toc2'><a class='toc' href='/'>M2</a></div>
-          <div class='toc2'><a class='toc' href='/'>M2</a></div>
-          <div class='toc3'><a class='toc' href='/'>M2 (last)</a></div>
+         </ul>
         </div>
-        <div class='toc1'>M1
-          <div class='toc2'><a class='toc' href='/'>M2</a></div>
-          <div class='toc2'><a class='toc' href='/'>M2</a></div>
-          <div class='toc3'><a class='toc' href='/'>M2 (last)</a></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">${PageTitle}</h1>
+${Content}
+         <hr>
+         ${SubTitle}
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script type='text/javascript' src='/scripts/wiki.js'></script>
-${PostLoad}
-</body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type='text/javascript' src="/scripts/bootstrap.min.js"></script>
+    <script type='text/javascript' src="/scripts/docs.min.js"></script>
+    <script type='text/javascript' src='/scripts/sh_main.js'></script>
+    <script type='text/javascript' src='/scripts/sh_tcl.js'></script>
+    <script type='text/javascript' src='/scripts/sh_c.js'></script>
+    <script type='text/javascript' src='/scripts/sh_cpp.js'></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>}
 
 ################################################################################

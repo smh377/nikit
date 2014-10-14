@@ -6,15 +6,13 @@ package require tdbc::sqlite3
 # -DSQLITE_ENABLE_FTS3_PARENTHESIS
 
 if {[llength $argv] != 1} {
-    puts stderr "Usage: create_database.tcl <filename>"
+    puts stderr "Usage: update_database.tcl <filename>"
     exit 1
 }
 
 tdbc::sqlite3::connection create db [lindex $argv 0]
 db allrows {PRAGMA foreign_keys = ON}
 db allrows {PRAGMA journal_mode = WAL}
-
-if 0 {
 
 db allrows {
     ALTER TABLE pages ADD COLUMN area TEXT
@@ -36,16 +34,24 @@ db allrows {
 			role TEXT NOT NULL,
 			PRIMARY KEY (username))
 }
-}
 
+set stmnt8 [db prepare {SELECT COUNT(*) FROM pages}]
+set rs [$stmnt8 execute]
+$rs nextdict d
+$rs close
+set pid [dict get $d "COUNT(*)"]
 
 set date [clock seconds]
 set who "init"
-set ids   [list 37562]
 set names [list "ACCESSRULES"]
 set pages [list {* {all {read write}} admin {}}]
 set areas [list "admin"]
-foreach id $ids name $names page $pages area $areas {
+foreach name $names page $pages area $areas {
+    set stmnt8 [db prepare {SELECT COUNT(*) FROM pages}]
+    set rs [$stmnt8 execute]
+    $rs nextdict d
+    $rs close
+    set id [dict get $d "COUNT(*)"]
     db allrows {INSERT INTO pages (id, name, date, who, area) VALUES (:id, :name, :date, :who, :area)}
     db allrows {INSERT INTO pages_content (id, content) VALUES (:id, :page)}
     db allrows {INSERT INTO pages_content_fts (id, name, content) VALUES (:id, :name, :page)}
@@ -53,7 +59,7 @@ foreach id $ids name $names page $pages area $areas {
 
 db allrows {INSERT INTO users (username, password, sid, role) VALUES ("admin", "admin", "", "admin")}
 
-#db allrows {CREATE INDEX idx_users_sid ON users(sid)}
+db allrows {CREATE INDEX idx_users_sid ON users(sid)}
 
 
 db close
