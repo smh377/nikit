@@ -142,22 +142,24 @@ oo::class create MkUp {
     method LineType {line} {
 	if {[regexp {^###(.*)$} $line -> data]} { return [list {type COMMENT data "" code $data}] }
 	if {$code_block} {
-	    if {[regexp {^======[^=]*.*$} $line]} { return [list {type CODE data ""}] }
+	    if {[regexp {^======(tcl|c|cpp|none|)\s*$} $line]} { return [list {type CODE data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$fixed_block} {
-	    if {[regexp {^===[^=]*.*$} $line]} { return [list {type FIXED data ""}] }
+	    if {[regexp {^===(tcl|c|cpp|none|)\s*$} $line]} { return [list {type FIXED data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$html_block} {
 	    if {[regexp {^<<inlinehtml>>$} $line]} { return [list {type HTML data ""}] }
 	    return [list [dict create type LINE data $line]]
 	} elseif {$options_block} {
-	    if {[regexp {^\+\+\+$} $line]} { return [list {type OPTS data ""}] }
-	    if {[regexp {^(.*)[ \t]{2}(.*)$} $line -> key value]} { return [list [dict create type KEY data $key] [dict create type VALUE data $value]] }
+	    if {[regexp {^\+\+\+\s*$} $line]} { return [list {type OPTS data ""}] }
+	    if {[regexp {^\s*(.+?)\t\s*(.*)$} $line -> key value]} { return [list [dict create type KEY data $key] [dict create type VALUE data $value]] }
+	    if {[regexp {^\s*(.+?)\s{2,}(.*)$} $line -> key value]} { return [list [dict create type KEY data $key] [dict create type VALUE data $value]] }
+	    if {[regexp {^\s*(.+?)\s+(.*)$} $line -> key value]} { return [list [dict create type KEY data $key] [dict create type VALUE data $value]] }
 	    error "Unexpected line in option-value block: $line"
 	} else {
 	    if {[string length $line] == 0} { return [list {type EMPTY data ""}] }
 	    if {[regexp {^\-\-\-\-[\-]*$} $line]} { return [list {type HR data ""}] }
-	    if {[regexp {^======([^=]*.*)$} $line -> data]} {
+	    if {[regexp {^======((tcl|c|cpp|none|))\s*$} $line -> data]} {
 		if {[string length $data] == 0} {
 		    set data sh_tcl
 		} elseif {$data in {c tcl}} {
@@ -168,7 +170,7 @@ oo::class create MkUp {
 		return [list [dict create type CODE data "" code $data]]
 	    }
 	    if {[regexp {^\!\!\!\!\!\!$} $line]} { return [list [dict create type CENTER data ""]] }
-	    if {[regexp {^===([^=]*.*)$} $line -> data]} { return [list {type FIXED data "" code $data}] }
+	    if {[regexp {^===((tcl|c|cpp|none|))\s*$} $line -> data]} { return [list {type FIXED data "" code $data}] }
 	    if {$allow_inline_html && [regexp {^<<inlinehtml>>$} $line]} { return [list [dict create type HTML data ""]] }
 	    if {[regexp {^<<toc>>$} $line]} { return [list [dict create type TOC data ""]] }
 	    if {[regexp {^<<categories>>(.*)$} $line -> links]} { return [list [dict create type CAT links $links data ""]] }
@@ -176,7 +178,7 @@ oo::class create MkUp {
 	    if {[regexp {^<<backrefs:(.*)>>$} $line -> link]} { return [list [dict create type BREF link $link data ""]] }
 	    if {[regexp {^<<discussion>>(.*)$} $line -> name]} { return [list [dict create type DISC data $name]] }
 	    if {$allow_include && [regexp {^<<include:(.*)>>$} $line -> link]} { return [list [dict create type INC link $link data ""]] }
-	    if {[regexp {^\+\+\+$} $line]} { return [list {type OPTS data ""}] }
+	    if {[regexp {^\+\+\+\s*$} $line]} { return [list {type OPTS data ""}] }
 	    if {[regexp {^[ \t]{3}([\*]+)[ \t](.*)$} $line -> ul data]} { return [list [dict create type UL lvl [string length $ul] data $data]] }
 	    if {[regexp {^[ \t]{3}([\d]+)\.[ \t](.*)$} $line -> ol data]} { return [list [dict create type OL lvl [string length $ol] data $data]] }
 	    if {[regexp {^[ \t]{3}(.*):[ \t]{3}(.*)} $line -> tag data]} { return [list [dict create type DL data ""] [dict create type DT data $tag] [dict create type DD data $data]] }
@@ -506,6 +508,7 @@ oo::class create MkUp {
 		CODE - FIXED - HTML {
 		    switch -exact -- $nstate {
 			LINE { }
+			CODE { my CloseState $nstate }
 			default { error "Unknow state transition: $state -> $nstate" }
 		    }
 		}
