@@ -508,7 +508,7 @@ oo::class create MkUp {
 		CODE - FIXED - HTML {
 		    switch -exact -- $nstate {
 			LINE { }
-			CODE { my CloseState $nstate }
+			CODE - FIXED { my CloseState $nstate }
 			default { error "Unknow state transition: $state -> $nstate" }
 		    }
 		}
