@@ -176,58 +176,100 @@ ${Content}
 
 ################################################################################
 
-    set login {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Login</title>
-<<include:TEMPLATE:cssjs>>
-</head>
-<body>
-  <div class='edit'>
-    <div class='header'>
-      <div class='logo'><a href='http://wiki.tcl.tk' class='logo'>wiki.tcl.tk</a><img class='logo' alt='' src='/plume.png'></div>
-      <div class='title'>Login</div>
-    </div>
-  </div>
-  <p>Please choose a nickname to identify yourself on this Wiki.</p>
-  <form method='post' action='/login' id='login'>
-    <fieldset title='Login' id='loginfs'>
-      <input title='Nickname' name='nickname' type='text' value='' tabindex='1' autofocus>
-      <input name='save' type='submit' value='Login'>
-    </fieldset>
-    <input name='R' type='hidden' value='${url}' tabindex='2'>
-  </form>
-  <script type='text/javascript' src='/scripts/wiki.js'></script>
-</body>
-</html>}
+    set login {<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+
+    <script src="/scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"></head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/login" id="login">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <p>Please choose a nickname to identify yourself on this Wiki.</p>
+        <input type="text" class="form-control" placeholder="Nickname" required="" autofocus="" name="nickname">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/scripts/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>}
 
 ################################################################################
 
-    set sessionlogin {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Start session</title>
-<<include:TEMPLATE:cssjs>>
-</head>
-<body>
-  <div class='edit'>
-    <div class='header'>
-      <div class='logo'><a href='http://wiki.tcl.tk' class='logo'>wiki.tcl.tk</a><img class='logo' alt='' src='/plume.png'></div>
-      <div class='title'>Start session</div>
-    </div>
-  </div>
-  <p>Please enter your username and password:</p>
-  <form method='post' action='/session/start' id='session'>
-    <fieldset title='Session' id='sessionfs'>
-      <table>
-      <tr><td>Username</td><td><input title='Username' name='uname' type='text' value='' tabindex='1' autofocus></td></tr>
-      <tr><td>Password</td><td><input title='Password' name='pword' type='password' value='' tabindex='2'></td></tr>
-      </table>
-      <input name='save' type='submit' value='Start session'>
-    </fieldset>
-  </form>
-</body>
-</html>}
+    set sessionlogin {<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+
+    <script src="/scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"></head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/session/start" id="session">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="form-control" placeholder="Username" required="" autofocus="" name="uname">
+        <input type="password" class="form-control" placeholder="Password" required="" name="pword">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/scripts/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>}
 
 ################################################################################
 
