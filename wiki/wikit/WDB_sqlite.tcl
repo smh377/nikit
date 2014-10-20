@@ -918,7 +918,7 @@ namespace eval WDB {
 	    set oldText [WDB GetContent $N]
 	    set oldar [WDB GetPage $N access_rules]
 	    WDB SavePage $getRefsCommand $getIncludesCommand $M $oldText $oldWho $oldName $oldType $oldDate 0 0
-	    WDB SaveAR $M $oldar 0
+	    WDB SaveArea $M $oldar 0
 	    # Copy history of $N to $M
 	    set id $M
 	    [statement "delete_changes"] allrows
