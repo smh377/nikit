@@ -557,7 +557,7 @@ ${Content}
 
     <div class="container">
 
-      <form class="form-signin" role="form" action="/saveupload" id="uploadform">
+      <form class="form-signin" role="form" method="post" action="/saveupload" id="uploadform">
         <h2 class="form-signin-heading">Upload from file</h2>
 	<input title='Upload Content' name='C' type='file' tabindex='2'>
 	<input name='N' type='hidden' value='${N}' tabindex='4'>
