@@ -12,6 +12,7 @@ namespace eval WDB {
     variable broken_link_cache
 
     proc statement {name} {
+	puts $name
 	variable statements
 	variable db
 	if {![info exists statements($name)]} {
@@ -158,6 +159,12 @@ namespace eval WDB {
 	if {!$transaction_started} {
 	    $db begintransaction
 	    set transaction_started 1
+	}
+    }
+
+    proc InitNameCache {} {
+	[statement "names"] foreach -as dicts d {
+	    set ::namecache([string tolower [dict get $d name]]) [dict get $d id]
 	}
     }
 
@@ -1099,7 +1106,6 @@ namespace eval WDB {
     proc CloseWikiDatabase {} {
 	variable db
 	variable statements
-	puts "Closing Wiki database"
 	if {[info exists statements]} {
 	    foreach {k v} [array get statements] {
 		$v close
@@ -1135,7 +1141,6 @@ namespace eval WDB {
 	variable broken_link_db_available
 	variable broken_link_cache
 	variable lstatements
-	puts "Closing Link database"
 	if {$broken_link_db_available} {
 	    set broken_link_db_available 0
 	    unset -nocomplain broken_link_cache

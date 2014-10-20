@@ -9,20 +9,6 @@ namespace eval WikiTemplates {
 
 ################################################################################
 
-    set conflict {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Edit conflict</title>
-</head>
-<p><b>Your changes have NOT been saved because someone (${who}) saved a change to this page while you were editing.</b></p>
-<p><i>Please restart a new <a href='/edit/${N}'>edit</a> and merge your version (which is shown in full below).</i></p>
-<p><pre>${C}</pre></p>
-<body>
-</body>
-</html>}
-
-################################################################################
-
     set content {${content}}
 
 ################################################################################
@@ -211,6 +197,7 @@ ${Content}
         <h2 class="form-signin-heading">Please sign in</h2>
         <p>Please choose a nickname to identify yourself on this Wiki.</p>
         <input type="text" class="form-control" placeholder="Nickname" required="" autofocus="" name="nickname">
+	<input name='R' type='hidden' value='${url}'>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
 
@@ -421,53 +408,15 @@ ${Content}
 
 ################################################################################
 
-    set readonly {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Read only</title>
-</head>
-<body>
-<p>This Wiki is in <b>read-only</b> mode.</p>
-</body>
-</html>}
-
-################################################################################
-
-    set noaccess {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>No access</title>
-</head>
-<body>
-<p>You can not access the requested page.</p>
-</body>
-</html>}
-
-################################################################################
-
-    set notloggedin {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Not logged in</title>
-</head>
-<body>
-<p><b>Your changes have NOT been saved because you were not logged in.</b></p>
-<p><i>Please restart a new <a href='/edit/${N}'>edit</a>, login and merge your version (which is shown in full below).</i></p>
-<p><pre>${C}</pre></p>
-</body>
-</html>}
-
-################################################################################
-
     set page {<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Tclers wiki">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
 
     <title>${HeaderTitle}</title>
 
@@ -577,43 +526,52 @@ ${Content}
 
 ################################################################################
 
-    set upload {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>${HeaderTitle}</title>
-<<include:TEMPLATE:cssjs>>
-</head>
-<body>
-  <div class='edit'>
-    <div class='header'>
-      <div class='logo'><a href='http://wiki.tcl.tk' class='logo'>wiki.tcl.tk</a><img class='logo' alt='' src='/plume.png'></div>
-      <div class='title'>${PageTitle}</div>
-      <div id='updated' class='updated'>${SubTitle}</div>
-    </div>
-    <form method='post' enctype='multipart/form-data' action='/saveupload' id='uploadform'>
-      <b>Upload from file: </b>
-      <label><button value='1' name='upload' type='submit' tabindex='1'>Upload</button></label>
-      <input title='Upload Content' name='C' type='file' tabindex='2'>
-      <input name='N' type='hidden' value='${N}' tabindex='4'>
-      <input name='O' type='hidden' value='${date} ${who}' tabindex='2'>
-    </form>
-  </div>
-  <script type='text/javascript' src='/scripts/wiki.js'></script>
-</body>
-</html>}
+    set upload {<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-################################################################################
+    <title>Signin Template for Bootstrap</title>
 
-    set uploadconflict {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Upload conflict</title>
-</head>
-<body>
-<p><b>Your changes have NOT been saved because someone (${who}) saved a change to this page while you were uploading.</b></p>
-<p><i>Please restart a new <a href='/upload/${N}'>upload</a>.</i></p>
-</body>
-</html>}
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+
+    <script src="/scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"></head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/saveupload" id="uploadform">
+        <h2 class="form-signin-heading">Upload from file</h2>
+	<input title='Upload Content' name='C' type='file' tabindex='2'>
+	<input name='N' type='hidden' value='${N}' tabindex='4'>
+	<input name='O' type='hidden' value='${date} ${who}' tabindex='2'>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Upload</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/scripts/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>}
 
 ################################################################################
 

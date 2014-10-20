@@ -17,7 +17,7 @@ oo::class create Wiki {
     variable included_pages
     variable max_search_results
     variable mpm_template
-    variable namecache
+#    variable namecache
     variable read_only
     variable server_http_port
     variable server_https_port
@@ -60,6 +60,7 @@ oo::class create Wiki {
 	if {$oneprocess} {
 	    set writer 1
 	}
+#	my init_cache
     }
 
     destructor {}
@@ -71,6 +72,14 @@ oo::class create Wiki {
 	    foreach {k v} $args {
 		set $k $v
 	    }
+	}
+    }
+
+    method init_cache {} {
+	if {[array size ::namecache] == 0} {
+	    puts "Init name cache..."
+	    WDB InitNameCache
+	    puts "Done, size = [array size ::namecache]"
 	}
     }
 
@@ -368,7 +377,7 @@ oo::class create Wiki {
 	    }
 	}
 	if {$report} {
-	    my formatTemplate TEMPLATE:noaccess
+	    my formatPage HeaderTitle "Access denied" PageTitle "Access denied" Content "<p>You can not access the requested page.</p>"
 	}
 	return 0
     }
@@ -1183,7 +1192,7 @@ oo::class create Wiki {
 
     method read_only {} {
 	if {$read_only} {
-	    my formatTemplate TEMPLATE:readonly
+	    my formatPage HeaderTitle "Read only" PageTitle "Read only" Content "<p>This Wiki is in <b>read-only</b> mode.</p>"
 	    return 1
 	}
 	return 0
@@ -1496,11 +1505,21 @@ oo::class create Wiki {
 	    return
 	}
 	if {![my loggedIn]} {
-	    my formatTemplate TEMPLATE:notloggedin N $N C [armour $C]
+	    set eC "<p><b>Your changes have NOT been saved because you were not logged in.</b></p>\n"
+	    append eC "<p><i>Please restart a new <a href='/edit/${N}'>edit</a>, login and merge your version (which is shown in full below).</i></p>\n"
+	    append eC "<p><pre>\n"
+	    append eC [armour ${C}] \n
+	    append eC "</pre></p>\n"
+	    my formatPage HeaderTitle "Not logged in" PageTitle "Not logged in" Content $eC
 	    return
 	}
 	if {[string length $date] && [string length $who] && ($O ne "$date $who")} {
-	    my formatTemplate TEMPLATE:conflict N $N who [my whoUrl $who] C [armour $C]
+	    set eC "<p><b>Your changes have NOT been saved because someone ([my whoUrl $who]) saved a change to this page while you were editing.</b></p>\n"
+	    append eC "<p><i>Please restart a new <a href='/edit/${N}'>edit</a> and merge your version (which is shown in full below).</i></p>\n"
+	    append eC "<p><pre>\n"
+	    append eC [armour ${C}] \n
+	    append eC "</pre></p>\n"
+	    my formatPage HeaderTitle "Edit conflict" PageTitle "Edit conflict" Content $eC
 	    return
 	}
 	# Check types
@@ -1575,7 +1594,9 @@ oo::class create Wiki {
 	if {![my getNParam N]} return
 	if {![my has_access $N write]} return
 	if {![my loggedIn]} {
-	    my formatTemplate TEMPLATE:notloggedin N $N C ""
+	    set eC "<p><b>Your changes have NOT been saved because you were not logged in.</b></p>\n"
+	    append eC "<p><i>Please restart a new <a href='/edit/${N}'>edit</a>, login and merge your version.</i></p>\n"
+	    my formatPage HeaderTitle "Not logged in" PageTitle "Not logged in" Content $eC
 	    return
 	}
 	set ud [$cgi getUpload C]
@@ -1586,7 +1607,9 @@ oo::class create Wiki {
 	set O [$cgi getParam O "" 0]
 	lassign [WDB GetPage $N name date who type ] name date who otype
 	if {[string length $date] && [string length $who] && ($O ne [list $date $who])} {
-	    my formatTemplate TEMPLATE:uploadconflict N $N who [my whoUrl $who]
+	    set eC "<p><b>Your changes have NOT been saved because someone ([my whoUrl $who]) saved a change to this page while you were uploading.</b></p>\n"
+	    append eC "<p><i>Please restart a new <a href='/upload/${N}'>upload</a>.</i></p>\n"
+	    my formatPage HeaderTitle "Upload conflict" PageTitle "Upload conflict" Content $eC
 	    return
 	}
 	set C [dict get $ud data]
@@ -2429,8 +2452,8 @@ oo::class create Wiki {
 
     method LookupPage {name {query_only 0}} {
 	set lcname [string tolower $name]
-	if {[info exists namecache($lcname)]} {
-	    return $namecache($lcname)
+	if {[info exists ::namecache($lcname)]} {
+	    return $::namecache($lcname)
 	}
 	set pid [lindex [WDB PageByName $name] 0]
 	if {![string is integer -strict $pid]} {
@@ -2444,7 +2467,7 @@ oo::class create Wiki {
 		}
 	    }
 	}
-	set namecache($lcname) $pid
+	set ::namecache($lcname) $pid
 	return $pid
     }
 
