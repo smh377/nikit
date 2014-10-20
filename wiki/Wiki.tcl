@@ -153,7 +153,7 @@ oo::class create Wiki {
     # Values must be armoured!
     method list2Table {l header} {
 	set row 0
-	set C "<table class='sortable'>\n"
+	set C "<table class='table table-bordered table-striped sortable'>\n"
 	append C "<thead><tr>\n"
 	foreach t $header {
 	    append C [my aTag <th> class $t [string totitle $t]]\n
