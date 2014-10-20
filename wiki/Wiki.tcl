@@ -272,9 +272,9 @@ oo::class create Wiki {
     # write : edit, new, rename, save, saveupload, upload
     # admin : editarea, query, savearea
     #
-    # Note: rpc methods are not protected. The are protected from being called
+    # Note: rpc methods are not protected. They are protected from being called
     # in a non-writer process and protections on non-rpc pages must prevent them
-    # being call with insufficient user rights.
+    # being called with insufficient user rights.
 
     # The access rules for a page are stored in a dict with roles as keys and a
     # list of privileges as values. Each page gets the access rules from the
@@ -2467,15 +2467,8 @@ oo::class create Wiki {
 		set idlink /image/[$cgi encode $name]
 		set plink /page/[$cgi encode $name]
 	    } else {
-		set page [WDB GetContent $id]
-		if {[string length $page] == 0 || $page eq " "} {
-		    set idlink /edit/[$cgi encode $name] ;# enter edit mode for empty pages
-		    set plink /page/[$cgi encode $name]
-		    set date 0
-		} else {
-		    set idlink /page/[$cgi encode $name]
-		    set plink /page/[$cgi encode $name]
-		}
+		set idlink /page/[$cgi encode $name]
+		set plink /page/[$cgi encode $name]
 	    }
 	}
 	return [list $id $name $date $type $idlink $plink]
