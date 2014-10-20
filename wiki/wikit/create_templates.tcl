@@ -402,31 +402,52 @@ ${Content}
 
 ################################################################################
 
-    set rename {<!DOCTYPE HTML>
-<html lang='en'>
-<head>
-<title>Rename page</title>
-<<include:TEMPLATE:cssjs>>
-</head>
-<body>
-  <div class='edit'>
-    <div class='header'>
-      <div class='logo'><a href='http://wiki.tcl.tk' class='logo'>wiki.tcl.tk</a><img class='logo' alt='' src='/plume.png'></div>
-      <div class='title'>Rename page</div>
-    </div>
-  </div>
-  <p>Enter a new name for page ${N}.</p>
-  <p>Current name is: ${oldname}</p>
-  <form method='post' action='/rename' id='rename'>
-    <fieldset title='Rename' id='login'>
-      <input title='Name' name='pagename' type='text' value='' tabindex='1' size='80' autofocus>
-      <input name='save' type='submit' value='Rename'>
-      <input name='N' type='hidden' value='${N}'>
-    </fieldset>
-  </form>
-  <script type='text/javascript' src='/scripts/wiki.js'></script>
-</body>
-</html>}
+    set rename {<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Rename page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+
+    <script src="/scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"></head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" method='post' action="/rename" id="rename">
+        <h2 class="form-signin-heading">Rename page</h2>
+        <p>Enter a new page name for page: ${oldname}</p>
+        <input type="text" class="form-control" placeholder="Name" required="" autofocus="" name="pagename">
+	<input name='N' type='hidden' value='${N}'>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Rename</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/scripts/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>}
 
 ################################################################################
 
@@ -617,7 +638,7 @@ set stmnt6 [db prepare {SELECT COUNT(*) FROM pages WHERE name = :name}]
 set stmnt7 [db prepare {SELECT id FROM pages WHERE name = :name}]
 set stmnt8 [db prepare {SELECT COUNT(*) FROM pages}]
 
-foreach n {conflict content cssjs edit preview error login sessionlogin updateuser deleteuser insertuser new rename notloggedin page query upload uploadconflict readonly editarea noaccess} {
+foreach n {content cssjs edit preview error login sessionlogin updateuser deleteuser insertuser new rename page query upload editarea} {
     set name TEMPLATE:$n
     set date [clock seconds]
     set who "init"
