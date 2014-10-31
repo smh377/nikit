@@ -543,7 +543,7 @@ oo::class create Wiki {
 			if {$k eq "id"} {
 			    dict set d id [my aTag <a> href /page/$v $v]
 			} else {
-			    dict set d id [armour $v]
+			    dict set d $k [armour $v]
 			}
 		    }
 		    lappend dl $d
