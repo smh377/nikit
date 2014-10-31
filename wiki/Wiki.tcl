@@ -1198,7 +1198,7 @@ oo::class create Wiki {
 	return 0
     }
 
-    # Parameters: N = page number, A = Comment, V = version, S = section
+    # Parameters: N = page number, A = Comment, V = version
     method edit {N} {
 	if {[my read_only]} return
 	set origN $N
@@ -1206,9 +1206,8 @@ oo::class create Wiki {
 	if {![my has_access $N write]} return
 	set A [my getIntParam A 0]
 	set V [my getIntParam V -1]
-	set S [my getIntParam S -1]
 	if {![my loggedIn]} {
-	    my login /edit/[$cgi encode $origN]?A=$A&V=$V&S=$S
+	    my login /edit/[$cgi encode $origN]?A=$A&V=$V
 	    return
 	}
 	lassign [WDB GetPage $N name date who type] name date who type
@@ -1220,24 +1219,17 @@ oo::class create Wiki {
 		set PageTitle "Add comment to [my aTag <a> href /page/[$cgi encode $name] $name]"
 	    } elseif {$V >= 0} {
 		if {$V > [WDB Versions $N]} {
-		    my pageNotFound /edit/[$cgi encode $name]?V=$V&A=$A&S=$S
+		    my pageNotFound /edit/[$cgi encode $name]?V=$V&A=$A
 		    return
 		}
-		set S -1
 		set C [my getPageWithVersion $N $V]
 		set PageTitle "Revert [my aTag <a> href /page/[$cgi encode $name] $name] to version $V"
 	    } else {
 		set C [WDB GetContent $N]
-		if {$S >= 0} {
-		    set mkup [my GetMkUp $N 1]
-		    set C [$mkup get_section $C $S]
-		    $mkup destroy
-		}
 		set PageTitle "Edit [my aTag <a> href /page/[$cgi encode $name] $name]"
 	    }
 
-	    my formatTemplate TEMPLATE:edit HeaderTitle "Edit [armour $name]" PageTitle $PageTitle SubTitle [my subTitle $date $who "Last edit"] \
-		C [armour $C] date $date who $who N $N S $S V $V A $A
+	    my formatTemplate TEMPLATE:edit HeaderTitle "Edit [armour $name]" PageTitle $PageTitle SubTitle [my subTitle $date $who "Last edit"] C [armour $C] date $date who $who N $N V $V A $A
 	} else {
 	    my upload $N
 	}
@@ -1486,7 +1478,6 @@ oo::class create Wiki {
 	#	set C [encoding convertfrom utf-8 $C]
 	set O [$cgi getParam O "" 0]
 	set A [my getIntParam A 0]
-	set S [my getIntParam S -1]
 	set V [my getIntParam V -1]
 	set save [$cgi getParam save "" 0]
 	set cancel [$cgi getParam cancel "" 0]
@@ -1528,21 +1519,6 @@ oo::class create Wiki {
 	set nick [$cgi cookie get wikit_e]
 	set who $nick@[$cgi getRequestParam REMOTE_ADDR]
 	if {[my isTextPage $type]} {
-	    # Reconstruct C if editing sections or append if adding comment
-	    if {$S >= 0} {
-		if {$V >= 0} {
-		    if {$V > [WDB Versions $N]} {
-			my pageNotFound /save/$N?V=$V&A=$A&S=$S
-			return
-		    }
-		    set fC [my getPageWithVersion $N $V]
-		} else {
-		    set fC [WDB GetContent $N]
-		}
-		set mkup [my GetMkUp $N 1]
-		set C [$mkup set_section $fC $S $C]
-		$mkup destroy
-	    }
 	    if {$A} {
 		# Look for category at end of page and insert comment before it
 		set Cl [split [string trimright [WDB GetContent $N] \n] \n]
@@ -2417,10 +2393,6 @@ oo::class create Wiki {
 	}
     }
 
-    method SectionEditLinkCommand {n s} {
-	return edit/$n?S=$s
-    }
-
     method BackrefsLinkCommand {name} {
 	lassign [my InfoProc $name 1 1] id name data type idling plink
 	if {[string is integer -strict $id]} {
@@ -2446,8 +2418,7 @@ oo::class create Wiki {
 		    allow_inline_html $allow_inline_html \
 		    backrefs_link_command [mycode BackrefsLinkCommand] \
 		    category_link_command [mycode CategoryLinkCommand] \
-		    internal_link_command [mycode InternalLinkCommand $query_only] \
-		    section_edit_link_command [mycode SectionEditLinkCommand $N]]
+		    internal_link_command [mycode InternalLinkCommand $query_only]]
     }
 
     method LookupPage {name {query_only 0}} {

@@ -86,7 +86,6 @@ namespace eval WikiTemplates {
         <input name='O' type='hidden' value='${date} ${who}' tabindex='2'>
 	<input name='_charset_' type='hidden' value='' tabindex='3'>
 	<input name='N' type='hidden' value='${N}' tabindex='4'>
-	<input name='S' type='hidden' value='${S}' tabindex='5'>
 	<input name='V' type='hidden' value='${V}' tabindex='6'>
 	<input name='A' type='hidden' value='${A}' tabindex='7'>
 	<input name='save' type='submit' value='Save your changes'>

@@ -7,8 +7,8 @@ package provide MkUp 1.0
 oo::class create MkUp {
 
     variable allow_include allow_inline_html backrefs backrefs_link_command category_link_command center code_block \
-	discussion discussion_count fixed_block h1_data h1_sections html html_block include_id includes insdelcnt \
-	internal_link_command link_id lstack ltype options_block references row_count section_edit_link_command state \
+	discussion discussion_count fixed_block html html_block include_id includes insdelcnt \
+	internal_link_command link_id lstack ltype options_block references row_count state \
 	table toc line_render_loop_limit
 
     constructor {args} {
@@ -18,7 +18,6 @@ oo::class create MkUp {
 #	set backrefs_link_command {}
 #	set category_link_command {}
 #	set internal_link_command {}
-#	set section_edit_link_command {}
 	my configure {*}$args
     }
 
@@ -37,8 +36,6 @@ oo::class create MkUp {
 	set discussion_count 0
 	set discussion 0
 	set fixed_block 0
-	set h1_data ""
-	set h1_sections {}
 	set html ""
 	set html_block 0
 	set include_id 0
@@ -60,10 +57,6 @@ oo::class create MkUp {
 	foreach line [split $data \n] {
 	    foreach ltype [my LineType $line] {
 		set ctype [dict get $ltype type]
-		if {$ctype eq "H1" && [llength $h1_data]} {
-		    lappend h1_sections [join $h1_data \n]
-		    set h1_data {}
-		}
 		if {$ctype ne "COMMENT"} {
 		    my NextState $ctype
 		    if {$code_block || $ctype eq "PRE"} {
@@ -75,16 +68,13 @@ oo::class create MkUp {
 		    }
 		}
 	    }
-	    lappend h1_data $line
 	}
 	my NextState END
-	if {[llength $h1_data]} { lappend h1_sections [join $h1_data \n] }
 	if {[llength $toc]} {
 	    my InsertToc allow_inline_html $allow_inline_html \
 		backrefs_link_command $backrefs_link_command \
 		category_link_command $category_link_command \
-		internal_link_command $internal_link_command \
-		section_edit_link_command $section_edit_link_command
+		internal_link_command $internal_link_command
 	}
 	return $html
     }
@@ -113,17 +103,6 @@ oo::class create MkUp {
 	append result [my RenderDiffLine $ctxt]
 	append result "</pre>"
 	return $result
-    }
-
-    method get_section {data n} {
-	my render $data
-	return [lindex $h1_sections $n]
-    }
-
-    method set_section {data n section_data} {
-	my render $data
-	lset h1_sections $n $section_data
-	return [join $h1_sections \n]
     }
 
     method get_includes {data} {
@@ -464,12 +443,7 @@ oo::class create MkUp {
 	    DT      { append html "</dt>" }
 	    EMPTY   { append html "" }
 	    FIXED   { append html "</pre>" ; set fixed_block 0 }
-	    H1      {
-		if {[llength $section_edit_link_command]} {
-		    append html "<a class='mkup_sectioneditlink' href='[{*}$section_edit_link_command [llength $h1_sections]]'>edit</a>"
-		}
-		append html "</h1></a>"
-	    }
+	    H1      { append html "</h1></a>" }
 	    H2      { append html "</h2></a>" }
 	    H3      { append html "</h3></a>" }
 	    HR      { append html "" }
