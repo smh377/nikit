@@ -467,7 +467,8 @@ ${Content}
     <link rel='stylesheet' href='/css/sh_style.css' type='text/css'>}
 
     <!-- Custom styles for this template -->
-    <link href="/css/dashboard.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-sortable.css">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -534,7 +535,9 @@ ${Content}
     <script type='text/javascript' src='/scripts/sh_tcl.js'></script>
     <script type='text/javascript' src='/scripts/sh_c.js'></script>
     <script type='text/javascript' src='/scripts/sh_cpp.js'></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script type='text/javascript' src='/scripts/moment.min.js'></script>
+    <script type='text/javascript' src='/scripts/bootstrap-sortable.js'></script>
+     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>}
