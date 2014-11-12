@@ -464,6 +464,7 @@ ${Content}
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='/css/nikit.css' type='text/css'>}
     <link rel='stylesheet' href='/css/sh_style.css' type='text/css'>}
 
     <!-- Custom styles for this template -->
@@ -531,6 +532,7 @@ ${Content}
     <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type='text/javascript' src="/scripts/bootstrap.min.js"></script>
     <script type='text/javascript' src="/scripts/docs.min.js"></script>
+    <script type='text/javascript' src='/scripts/nikit.js'></script>
     <script type='text/javascript' src='/scripts/sh_main.js'></script>
     <script type='text/javascript' src='/scripts/sh_tcl.js'></script>
     <script type='text/javascript' src='/scripts/sh_c.js'></script>
