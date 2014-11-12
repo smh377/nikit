@@ -1,5 +1,4 @@
 set writer 0
-set oneprocess 0
 foreach {k v} $argv {
     set [string trim $k -] $v
 }
@@ -18,7 +17,7 @@ if {![file readable $WikiDatabase]} {
     set WikiDatabase [file dirname [file dirname [info script]]]/nikit.tkd
 }
 puts stderr "Using database $WikiDatabase"
-WDB WikiDatabase readonly [expr {!$writer && !$oneprocess}] file $WikiDatabase
+WDB WikiDatabase readonly [expr {!$writer}] file $WikiDatabase
 
 set LinkDatabase [file dirname [file dirname [info script]]]/rlinks.tkd
 if {[file readable $LinkDatabase]} {
@@ -35,7 +34,7 @@ proc handle_request {sock headers body} {
 #    puts "####################################################################################################"
 
     set cgi [SCGIWiki new sock $sock headers $headers body $body]
-    set wikiserver [Wiki new cgi $cgi server_name localhost read_only 0 writer $::writer oneprocess $::oneprocess]
+    set wikiserver [Wiki new cgi $cgi server_name localhost read_only 0 writer $::writer]
     $cgi configure server $wikiserver
     $cgi process
     $cgi destroy

@@ -26,7 +26,6 @@ oo::class create Wiki {
     variable writer
     variable writer_host
     variable writer_port
-    variable oneprocess
 
     constructor {args} {
 	set enc(rpcwriter) {N 0 C 1 who 1 name 1 type 1 time 0}
@@ -53,12 +52,8 @@ oo::class create Wiki {
 	set writer 0
 	set cgi {}
 	set included_pages {}
-	set oneprocess 0
 	foreach {k v} $args {
 	    set $k $v
-	}
-	if {$oneprocess} {
-	    set writer 1
 	}
 #	my init_cache
     }
@@ -1254,31 +1249,24 @@ oo::class create Wiki {
 	    $cgi asText "error\nTrying to write in non-writer process."
 	}
 
-	if {$oneprocess} {
-	    lassign $args N M oldname oldtime oldwho oldtype newname newtime newwho newtype
-	} else {
-	    if {![my getNParam N N]} return
-	    if {![my getNParam M M]} return
-	    set newwho  [my dec rpcrenamer newwho  "" 0]
-	    set oldwho  [my dec rpcrenamer oldwho  "" 0]
-	    set newname [my dec rpcrenamer newname "" 0]
-	    set oldname [my dec rpcrenamer oldname "" 0]
-	    set newtime [my dec rpcrenamer newtime 0  1]
-	    set oldtime [my dec rpcrenamer oldtime 0  1]
-	    set newtype [my dec rpcrenamer newtype "" 0]
-	    set oldtype [my dec rpcrenamer oldtype "" 0]
-	}
+	if {![my getNParam N N]} return
+	if {![my getNParam M M]} return
+	set newwho  [my dec rpcrenamer newwho  "" 0]
+	set oldwho  [my dec rpcrenamer oldwho  "" 0]
+	set newname [my dec rpcrenamer newname "" 0]
+	set oldname [my dec rpcrenamer oldname "" 0]
+	set newtime [my dec rpcrenamer newtime 0  1]
+	set oldtime [my dec rpcrenamer oldtime 0  1]
+	set newtype [my dec rpcrenamer newtype "" 0]
+	set oldtype [my dec rpcrenamer oldtype "" 0]
 
 	if {[catch {WDB RenamePage [mycode getRefs] [mycode getIncludes] $N $M $newname $newtime $newwho $newtype $oldname $oldtime $oldwho $oldtype} msg]} {
 	    set txt "error\n$msg\n$::errorInfo"
 	} else {
 	    set txt "renamed"
 	}
-	if {$oneprocess} {
-	    return $txt
-	} else {
-	    $cgi asText $txt
-	}
+
+	$cgi asText $txt
     }
 
     method renamePage {N} {
@@ -1399,16 +1387,12 @@ oo::class create Wiki {
 	}
 	if {[my read_only]} return
 
-	if {$oneprocess} {
-	    lassign $args N C who name type time
-	} else {
-	    if {![my getNParam N]} return
-	    set C    [my dec rpcwriter C    "" 0]
-	    set who  [my dec rpcwriter who  "" 0]
-	    set name [my dec rpcwriter name "" 0]
-	    set type [my dec rpcwriter type "" 0]
-	    set time [my dec rpcwriter time 0  1]
-	}
+	if {![my getNParam N]} return
+	set C    [my dec rpcwriter C    "" 0]
+	set who  [my dec rpcwriter who  "" 0]
+	set name [my dec rpcwriter name "" 0]
+	set type [my dec rpcwriter type "" 0]
+	set time [my dec rpcwriter time 0  1]
 
 	if {[catch {WDB SavePage [mycode getRefs] [mycode getIncludes] $N $C $who $name $type $time} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
@@ -1423,12 +1407,8 @@ oo::class create Wiki {
 	}
 	if {[my read_only]} return
 
-	if {$oneprocess} {
-	    lassign $args N C
-	} else {
-	    if {![my getNParam N]} return
-	    set C [my dec rpcareawriter C    "" 0]
-	}
+	if {![my getNParam N]} return
+	set C [my dec rpcareawriter C    "" 0]
 
 	if {[catch {WDB SaveArea $N $C} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
@@ -1442,11 +1422,7 @@ oo::class create Wiki {
 	    return [my RPCreturn "error\nTrying to write in non-writer process."]
 	}
 	if {[my read_only]} return
-	if {$oneprocess} {
-	    lassign $args name
-	} else {
-	    set name [my dec rpcpagecreator name "" 0]
-	}
+	set name [my dec rpcpagecreator name "" 0]
 	if {[catch {WDB CreatePage $name} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
 	} else {
@@ -1619,41 +1595,24 @@ oo::class create Wiki {
     }
 
     method RPCreturn {txt} {
-	if {$oneprocess} {
-	    return $txt
-	} else {
-	    $cgi asText $txt
-	    return ""
-	}
+	$cgi asText $txt
+	return ""
     }
 
     method RPC {rpc args} {
-	if {$oneprocess} {
-	    switch -exact -- $rpc {
-		rpcareawriter { set data [my RPCAreaWriter {*}$args] }
-		rpcdeleteruser { set data [my RPCDeleterUser {*}$args] }
-		rpcinserteruser { set data [my RPCInserterUser {*}$args] }
-		rpcpagecreator { set data [my RPCPageCreator {*}$args] }
-		rpcrenamer { set data [my RPCRenamer {*}$args] }
-		rpcupdateruser { set data [my RPCUpdaterUser {*}$args] }
-		rpcupdaterusersid { set data [my RPCUpdaterUserSID {*}$args] }
-		rpcwriter { set data [my RPCWriter {*}$args] }
+	set cmd [list http::formatQuery]
+	foreach {key encode} $enc($rpc) value $args {
+	    lappend cmd $key
+	    if {$encode} {
+		lappend cmd [base64::encode [encoding convertto utf-8 $value]]
+	    } else {
+		lappend cmd $value
 	    }
-	} else {
-	    set cmd [list http::formatQuery]
-	    foreach {key encode} $enc($rpc) value $args {
-		lappend cmd $key
-		if {$encode} {
-		    lappend cmd [base64::encode [encoding convertto utf-8 $value]]
-		} else {
-		    lappend cmd $value
-		}
-	    }
-	    set tkn [http::geturl http://$writer_host:$writer_port/$rpc -query [{*}$cmd]]
-	    http::wait $tkn
-	    set data [string trim [http::data $tkn] \n]
-	    http::cleanup $tkn
 	}
+	set tkn [http::geturl http://$writer_host:$writer_port/$rpc -query [{*}$cmd]]
+	http::wait $tkn
+	set data [string trim [http::data $tkn] \n]
+	http::cleanup $tkn
 
 	set datal [split $data \n]
 	set stat [lindex $datal 0]
@@ -2122,12 +2081,8 @@ oo::class create Wiki {
 	if {!$writer} {
 	    return [my RPCreturn "error\nTrying to write in non-writer process."]
 	}
-	if {$oneprocess} {
-	    lassign $args uname sid
-	} else {
-	    set uname [my dec rpcupdaterusersid uname  "" 0]
-	    set sid [my dec rpcupdaterusersid sid "" 0]
-	}
+	set uname [my dec rpcupdaterusersid uname  "" 0]
+	set sid [my dec rpcupdaterusersid sid "" 0]
 	if {[catch {WDB UpdateUserSID $uname $sid} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
 	} else {
@@ -2185,14 +2140,10 @@ oo::class create Wiki {
 	if {!$writer} {
 	    return [my RPCreturn "error\nTrying to write in non-writer process."]
 	}
-	if {$oneprocess} {
-	    lassign $args uname pword sid role
-	} else {
-	    set uname [my dec rpcinserteruser uname "" 0]
-	    set pword [my dec rpcinserteruser pword "" 0]
-	    set sid   [my dec rpcinserteruser sid   "" 0]
-	    set role  [my dec rpcinserteruser role  "" 0]
-	}
+	set uname [my dec rpcinserteruser uname "" 0]
+	set pword [my dec rpcinserteruser pword "" 0]
+	set sid   [my dec rpcinserteruser sid   "" 0]
+	set role  [my dec rpcinserteruser role  "" 0]
 	if {[catch {WDB InsertUser $uname $pword $sid $role} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
 	} else {
@@ -2204,14 +2155,10 @@ oo::class create Wiki {
 	if {!$writer} {
 	    return [my RPCreturn "error\nTrying to write in non-writer process."]
 	}
-	if {$oneprocess} {
-	    lassign $args uname pword sid role
-	} else {
-	    set uname [my dec rpcinserteruser uname "" 0]
-	    set pword [my dec rpcinserteruser pword "" 0]
-	    set sid   [my dec rpcinserteruser sid   "" 0]
-	    set role  [my dec rpcinserteruser role  "" 0]
-	}
+	set uname [my dec rpcinserteruser uname "" 0]
+	set pword [my dec rpcinserteruser pword "" 0]
+	set sid   [my dec rpcinserteruser sid   "" 0]
+	set role  [my dec rpcinserteruser role  "" 0]
 	if {[catch {WDB UpdateUser $uname $pword $sid $role} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
 	} else {
@@ -2223,11 +2170,7 @@ oo::class create Wiki {
 	if {!$writer} {
 	    return [my RPCreturn "error\nTrying to write in non-writer process."]
 	}
-	if {$oneprocess} {
-	    lassign $args uname
-	} else {
-	    set uname  [my dec rpcdeleteruser uname  "" 0]
-	}
+	set uname  [my dec rpcdeleteruser uname  "" 0]
 	if {[catch {WDB DeleteUser $uname} msg]} {
 	    return [my RPCreturn "error\n$msg\n$::errorInfo"]
 	} else {
