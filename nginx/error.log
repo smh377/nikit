@@ -1,0 +1,1 @@
+2013/08/06 12:58:16 [error] 4774#0: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.30.223, server: jdclubuntu, request: "POST /saveupload HTTP/1.1", upstream: "scgi://127.0.0.1:9999", host: "jdclubuntu", referrer: "http://jdclubuntu/upload?N=40"
