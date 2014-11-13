@@ -1,0 +1,108 @@
+Nikit: a Wikit compatile Nginx+SCGI based Wiki
+==============================================
+
+Requirements:
+-------------
+
+- Tcl 8.6 (with TclOO, tdbc, sqlite3)
+- nginx 1.7 with https support
+- Tcllib 1.15
+
+Database:
+---------
+
+Create new database:
+
+    % tclsh wiki/wikit/create_database.tcl <database_filename>
+    % tclsh wiki/wikit/create_templates.tcl <database_filename>
+
+Convert Wikit database:
+
+    % tclsh wiki/wikit/update_database.tcl <database_filename>
+    % tclsh wiki/wikit/create_templates.tcl <database_filename>
+
+Start and stop:
+---------------
+
+The scripts to start and stop the server expect nginx to be in the PATH, at
+/usr/local/sbin/nginx, or specified with the NGINXPATH environment variable:
+
+    % export NGINXPATH=<path_to_nginx_executable>
+
+Start the server:
+
+    % ./START.nginx
+
+Stop the server:
+
+    % ./STOP.nginx
+
+Pages:
+------
+
+login
+logout
+session
+users
+whoami
+brokenlinks
+cleared
+diff
+help
+history
+htmlpreview
+image,
+nextpage
+page
+preview
+previouspage
+random
+recent
+ref
+revision,
+rss
+search
+sitemap
+tclpreview
+welcome
+edit
+new
+rename
+save
+saveupload
+upload
+editarea
+query
+savearea
+
+Access control
+--------------
+
+There are 3 ways to be logged in:
+
+- not
+- edit logged in
+- session logged in (user is given username+password to login)
+
+The way one is logged in is used by the predefined roles:
+
+- all    : each user of the site gets this role
+- known  : edit logged in
+- trusted: session logged in
+
+Two additional roles exist for trusted users:
+
+- gnome  : edits by this user are not shown in the recent changes list
+- admin  : full access to pages and users
+
+These roles can be given to users by an admin user.
+
+Known privileges are none, read, write and admin. These priveleges give access
+to the following pages:
+
+- none  : login, logout, session, users, whoami
+- read  : brokenlinks, cleared, diff, help, history, htmlpreview, image,
+          nextpage, page, preview, previouspage, random, recent, ref, revision,
+          rss, search, sitemap, tclpreview, welcome
+- write : edit, new, rename, save, saveupload, upload
+- admin : editarea, query, savearea
