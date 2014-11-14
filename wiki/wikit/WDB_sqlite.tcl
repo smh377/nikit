@@ -12,7 +12,6 @@ namespace eval WDB {
     variable broken_link_cache
 
     proc statement {name} {
-	puts $name
 	variable statements
 	variable db
 	if {![info exists statements($name)]} {

@@ -768,7 +768,7 @@ oo::class create Wiki {
 	return [::sha2::sha256 $etag]
     }
 
-    # Parameters: N = page number, T = 1 => textual 0 => rendered, R = allow redirect, O = redirected from
+    # Parameters: N = page number, T = 1 => textual 0 => rendered, R 1 = allow redirect, O = redirected from
     method page {N} {
 	if {![my getN N]} return
 	return [my showpage $N]
@@ -1016,6 +1016,9 @@ oo::class create Wiki {
 
     # Parameters: N = page number
     method backRefs {N} {
+	if {![string is integer -strict $N]} {
+	    set N [my getIntParam N $N]
+	}
 	if {![my getN N]} return
 	if {![my has_access -1 read]} return
 	set A [my getIntParam A 0]
@@ -1454,10 +1457,8 @@ oo::class create Wiki {
 	#	set C [encoding convertfrom utf-8 $C]
 	set O [$cgi getParam O "" 0]
 	set A [my getIntParam A 0]
-	set V [my getIntParam V -1]
 	set save [$cgi getParam save "" 0]
 	set cancel [$cgi getParam cancel "" 0]
-	set preview [$cgi getParam preview "" 0]
 	lassign [WDB GetPage $N name date who type ] name date who otype
 	if { [string tolower $cancel] eq "cancel" } {
 	    $cgi redirect /page/[$cgi encode $name] 302
@@ -2345,13 +2346,20 @@ oo::class create Wiki {
     }
 
     method CategoryLinkCommand {name} {
+	if {[string match "Category *" $name]} {
+	    lassign [my InfoProc $name 1 1] id iname
+	    if {[string is integer -strict $id]} {
+		return [dict create name $iname link "/page/[$cgi encode $iname]"]
+	    }
+	} else {
+	    lassign [my InfoProc "Category $name" 1 1] id iname
+	    if {[string is integer -strict $id]} {
+		return [dict create name "$iname" link "/page/[$cgi encode $iname]"]
+	    }
+	}
 	lassign [my InfoProc $name 1 1] id iname
 	if {[string is integer -strict $id]} {
-	    return [dict create name $iname link "/page/[$cgi encode $name]"]
-	}
-	lassign [my InfoProc "Category $name" 1 1] id iname
-	if {[string is integer -strict $id]} {
-	    return [dict create name $iname link "/page/[$cgi encode $name]"]
+	    return [dict create name $iname link "/page/[$cgi encode $iname]"]
 	}
 	return ""
     }
@@ -2418,8 +2426,6 @@ oo::class create Wiki {
 	set page [$cgi decode $page]
 	set epath [join [lrange $rpath 1 end] /]
 	set rt 1
-
-puts "path $path page $page"
 
 	switch -exact -- $path {
 	    / - {} { my home }

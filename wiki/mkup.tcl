@@ -341,10 +341,12 @@ oo::class create MkUp {
     }
 
     method InsertCategories {} {
-	append html "<div class='mkup_centered'><table class='mkup_categories'><tr>"
+	append html "<hr><div class='mkup_centered'><table class='mkup_categories'><tr>"
 	regsub -all {%\|%} [dict get $ltype links] \uFDD0 links
 	foreach link [split $links |] {
 	    lassign [split $link \uFDD0] pname lname
+	    set pname [string trim $pname]
+	    set lname [string trim $lname]
 	    if {[string length $lname] == 0} { set lname $pname }
 	    set lnkd [{*}$category_link_command $pname]
 	    if {[dict size $lnkd]} {
