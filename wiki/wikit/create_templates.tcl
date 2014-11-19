@@ -464,8 +464,8 @@ ${Content}
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='/css/nikit.css' type='text/css'>}
-    <link rel='stylesheet' href='/css/sh_style.css' type='text/css'>}
+    <link rel='stylesheet' href='/css/nikit.css' type='text/css'>
+    <link rel='stylesheet' href='/css/sh_style.css' type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="/css/dashboard.css" rel="stylesheet" type="text/css">
