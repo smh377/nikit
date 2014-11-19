@@ -1,3 +1,11 @@
 div.mkup_discussion {
     display: none;
 }
+ins.mkup_diffnew {
+    background: #80ff80;
+    text-decoration: none;
+}
+del.mkup_diffold {
+    background: #ffa0a0;
+    text-decoration: none;
+}
