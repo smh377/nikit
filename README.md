@@ -1,4 +1,4 @@
-#Nikit: a Wikit compatile Nginx+SCGI based Wiki
+#Nikit: a Wikit compatible SCGI based Wiki
 
 ##Requirements
 
@@ -33,11 +33,16 @@ Stop the server:
 
     % ./STOP.nginx
 
-##Page
+##Pages
 
-blame           : show by who and when lines were added
-brokenlinks	: show list of broken links
-cleared		: show cleared pages
+page name | description
+----------|------------
+blame | show by who and when lines were added
+brokenlinks | show list of broken links
+cleared | show cleared pages
+
+
+
 diff            : show differences between version of a page.
 			N   page number
 			?V? page version 1, default is latest version
