@@ -81,3 +81,29 @@ function getBackRefs(page,containerid)
 {
     ajaxpage("/ref", "N=" + page + "&A=1", containerid)
 }
+/*
+ * compare versions
+ */
+
+function versionCompare(N, W) 
+{
+    var A = -1;
+    var B = -1;
+    var i = -1;
+    for(i = 0; i < 1000 && (A < 0 || B < 0); i++) {
+	try {
+	    var p = document.getElementById("historyA"+i);
+	    if (p.checked) {
+		A = p.value;
+	    }
+	    p = document.getElementById("historyB"+i);
+	    if (p.checked) {
+		B = p.value;
+	    }
+	}
+	catch(err) {
+	    break
+	}
+    }
+    location.href = "/diff/"+N+"?V="+B+"&D="+A+"#diff0";
+}
