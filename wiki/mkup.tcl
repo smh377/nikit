@@ -203,9 +203,9 @@ oo::class create MkUp {
 	regsub -all {\\\[} $line "\uFDE0" line
 	regsub -all {\[\[} $line "\uFDDF" line
 	set linkre1 {\[(https?|ftp|news|mailto|file|irc):([^\s:]\S*[^\]\)\s\.,!\?;:'>"])\]} ; # "
-	set linkre2 {(https?|ftp|news|mailto|file|irc):([^\s:][^\s%]*[^\]\)\s\.,!\?;:'>"])%\|%([^%]+)%\|%} ; # "
+	set linkre2 {(https?|ftp|news|mailto|file|irc):([^\s:][^\s]*[^\]\)\s\.,!\?;:'>"])%\|%([^%]+)%\|%} ; # "
 	set linkre3 {(https?|ftp|news|mailto|file|irc):([^\s:]\S*[^\]\)\s\.,!\?;:'>"])} ; # "
-	set linkre4 {toc:(#[^\s:][^\s%]*[^\]\)\s\.,!\?;:'>"])%\|%([^%]+)%\|%} ; # "
+	set linkre4 {toc:(#[^\s:][^\s]*[^\]\)\s\.,!\?;:'>"])%\|%([^%]+)%\|%} ; # "
 	regsub -all $linkre1 $line "\uFDD5\\1\uFDD8\\2\uFDD5" line
         set r 0
         while {[regexp {\[backrefs:([^\]]+)\]} $line -> name]} {
