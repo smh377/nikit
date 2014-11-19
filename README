@@ -1,15 +1,12 @@
-Nikit: a Wikit compatile Nginx+SCGI based Wiki
-==============================================
+#Nikit: a Wikit compatile Nginx+SCGI based Wiki#
 
-Requirements:
--------------
+##Requirements##
 
 - Tcl 8.6 (with TclOO, tdbc, sqlite3)
 - nginx 1.7 with https support
 - Tcllib 1.15
 
-Database:
----------
+##Database##
 
 Create new database:
 
@@ -21,8 +18,7 @@ Convert Wikit database:
     % tclsh wiki/wikit/update_database.tcl <database_filename>
     % tclsh wiki/wikit/create_templates.tcl <database_filename>
 
-Start and stop:
----------------
+##Start and stop##
 
 The scripts to start and stop the server expect nginx to be in the PATH, at
 /usr/local/sbin/nginx, or specified with the NGINXPATH environment variable:
@@ -37,8 +33,7 @@ Stop the server:
 
     % ./STOP.nginx
 
-Pages:
-------
+##Pages##
 
 blame           : show by who and when lines were added
 brokenlinks	: show list of broken links
@@ -118,8 +113,7 @@ users		: user management
 welcome		: show welcome page
 whoami		: 
 
-Access control
---------------
+##Access control##
 
 There are 3 ways to be logged in:
 
