@@ -40,13 +40,8 @@ page name | description
 blame | show by who and when lines were added
 brokenlinks | show list of broken links
 cleared | show cleared pages
+diff | show differences between version of a page: N = page number, ?V? = page version 1 (default is latest version), ?D? = page version 2, default is version preceding version 1
 
-
-
-diff            : show differences between version of a page.
-			N   page number
-			?V? page version 1, default is latest version
-			?D? page version 2, default is version preceding version 1
 edit		: edit a page
 			N   page number
 			?A? add comment, 0 or 1, default is 0
