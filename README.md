@@ -116,7 +116,7 @@ To check if a page can be accessed by a user, the following steps are taken:
 - Use the area to look through the ACCESSRULES page for a matching role an list
   of required privilege.
 
-    area_match_string> {role { ?privilege ...? } ...}
+    area_match_string {role { ?privilege ...? } ...}
 
 - Use the user's list or roles to check if he/she has the proper privilege
 
