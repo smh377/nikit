@@ -40,78 +40,38 @@ page name | description
 blame | show by who and when lines were added
 brokenlinks | show list of broken links
 cleared | show cleared pages
-diff | show differences between version of a page: N = page number, ?V? = page version 1 (default is latest version), ?D? = page version 2, default is version preceding version 1
-
-edit		: edit a page
-			N   page number
-			?A? add comment, 0 or 1, default is 0
-			?V? version to edit, used when reverting
-editarea	: edit page privilege area
-			N   page number
-help		: show help page
-history		: show page history
-			N   page number
-			?S? start version in history
-			?L? number of versions to show
-htmlpreview	: preview HTML page, called by preview
-			N   page number
-image		: show image
-			N   page number
-			?V? page version, default is latest version
-login		: edit-login
-logout		: edit-logout
-new		: create new page
-nextpage	: show next page
-			N   page number
-page		: show page
-			N   page number
-			?T? 1 = textual, 0 = rendered, default is 0
-			?R? 1 = allow redirect, 0 = no redirect, default is 1
-preview		: preview wiki, html or Tcl page
-			N   page number
-			O   text of page to preview
-previouspage	: show previous page
-			N   page number
-query		: query the SQLite database
-			?Q? SQL query
-random		: show random page
-recent		: show recent edits
-			?A? 1 = show gone edits, 0 = don't show gnome edits
-ref		: show references to a page
-			N   page number
-			?A? 1 = return HTML <ul> for inclusion, 0 = return as
-			page, default is 0
-rename		: rename a page
-			N   page number
-			?pagename? new page name
-revision	: show specific revision of a page
-			N   page number
-			V   page version
-			?T? 1 = textual, 0 = rendered, default is 0
-rss		: return RSS change history
-save		: save a page
-			N   page number
-			C   content to save
-			O   name of person editing the page
-			A   1 = comment, 0 = page
-			cancel    cancel = cancel the edit
-savearea	: save page area
-			N   page number
-			C   page area
-saveupload	: upload a page
-			N   page number
-			C   content to save
-search		: search the wiki
-			?S? search string
-session		: session management
-sitemap		: show a sitemap
-tclpreview	: preview Tcl page, called by preview
-			N page number
-upload		: upload a page
-			N   page number
-users		: user management
-welcome		: show welcome page
-whoami		: show edit and session login information
+diff | show differences between version of a page: N = page number, ?V? = page version 1 (default is latest version), ?D? = page version 2 (default is version preceding version 1)
+edit | edit a page, N = page number, ?A? = add comment (0 or 1, default is 0), ?V? version to edit (used when reverting)
+editarea | edit page privilege area, N = page number
+help | show help page
+history	| show page history, N = page number, ?S? = start version in history, ?L? = number of versions to show
+htmlpreview | preview HTML page, called by preview, N = page number
+image | show image, N = page number, ?V? = page version (default is latest version)
+login | edit-login
+logout | edit-logout
+new | create new page
+nextpage | show next page, N = page number
+page | show page, N = page number, ?T? = format (1 = textual, 0 = rendered, default is 0), ?R? = redirect behavior (1 = allow redirect, 0 = no redirect, default is 1)
+preview	| preview wiki, html or Tcl page, N = page number, O = text of page to preview
+previouspage | show previous page, N = page number
+query | query the SQLite database, ?Q? = SQL query
+random	| show random page
+recent	| show recent edits, ?A? = show gnome edits (1 = show gone edits, 0 = don't show gnome edits)
+ref | show references to a page, N = page number, ?A? = format (1 = return HTML for inclusion, 0 = return as page, default is 0)
+rename | rename a page, N = page number, ?pagename? = new page name
+revision | show specific revision of a page, N = page number, V = page version, ?T? = format (1 = textual, 0 = rendered, default is 0)
+rss | return RSS change history
+save | save a page, N = page number, C = content to save, O = name of person editing the page, A = type (1 = comment, 0 = page), cancel (cancel = cancel the edit)
+savearea | save page area, N = page number, C = page area
+saveupload | upload a page, N = page number, C = content to save
+search | search the wiki, ?S? = search string
+session	| session management
+sitemap	| show a sitemap
+tclpreview | preview Tcl page, called by preview, N = page number
+upload | upload a page, N = page number
+users | user management
+welcome	| show welcome page
+whoami | show edit and session login information
 
 ##Access control
 
