@@ -257,6 +257,140 @@ namespace eval WDB {
 
     #----------------------------------------------------------------------------
     #
+    # AnnotatePageVersion --
+    #
+    #     Retrieves a version of a page in the database, annotated with
+    #     information about when changes appeared.
+    #
+    # Parameters:
+    #	id - Row ID in the 'pages' view of the page to be annotated
+    #	version - Version of the page to annotate.  Default is the current
+    #               version
+    #	db - Handle to the Wikit database.
+    #
+    # Results:
+    #	Returns a list of lists. The first element of each sublist is a line
+    #	from the page.  The second element is the number of the version
+    #     in which that line first appeared. The third is the time at which
+    #     the change was made, and the fourth is a string identifying who
+    #     made the change.
+    #
+    #----------------------------------------------------------------------------
+
+    proc AnnotatePageVersion {pid {version {}}} {
+	variable db
+
+	set latest [Versions $pid]
+	if {$version eq {}} {
+	    set version $latest
+	}
+	if {![string is integer $version] || $version < 0} {
+	    error "bad version number \"$version\": must be a positive integer"
+	}
+	if {$version > $latest} {
+	    error "cannot get version $version, latest is $latest"
+	}
+
+	# Retrieve the version to be annotated
+	set lines [GetPageVersionLines $pid $version]
+	set crsdl {}
+	[statement "changes_for_pid_asc"] foreach -as dicts d {
+	    lappend crsdl $d
+	}
+
+	# Start the annotation by guessing that all lines have been there since
+	# the first commit of the page.
+
+	if {$version == $latest} {
+	    lassign [GetPage $pid date who] date who
+	} else {
+	    set d [lindex $crsdl $version]
+	    set date [dict get? $d date]
+	    set who [dict get? $d who]
+	}
+	if {$latest == 0} {
+	    set firstdate $date
+	    set firstwho $who
+	} else {
+	    set d [lindex $crsdl 0]
+	    set firstdate [dict get? $d date]
+	    set firstwho [dict get? $d who]
+	}
+
+	# versions has one entry for each element in $lines, and contains
+	# the version in which that line first appeared.  We guess version
+	# 0 for everything, and then fill in later versions by working backward
+	# through the diffs.  Similarly 'dates' has the version dates and
+	# 'whos' has the users that committed the versions.
+	set versions [struct::list repeat [llength $lines] 0]
+	set dates [struct::list repeat [llength $lines] $date]
+	set whos [struct::list repeat [llength $lines] $who]
+
+	# whither contains, for each line a version being examined, the line
+	# index corresponding to that line in 'lines' and 'versions'. An index
+	# of -1 indicates that the version being examined is older than the
+	# line
+	set whither [list]
+	for {set i 0} {$i < [llength $lines]} {incr i} {
+	    lappend whither $i
+	}
+
+	# Walk backward through all versions of the page
+	while {$version > 0} {
+	    incr version -1
+
+	    # Walk backward through all changes applied to a version
+	    set d [lindex $crsdl $version]
+	    set lastdate [dict get? $d date]
+	    set lastwho [dict get? $d who]
+
+	    set v $version
+
+	    [statement "diffs_for_pid_v"] foreach -as dicts dd {
+
+		set from [dict get $dd fromline]
+		set to [dict get $dd toline]
+		set old [dict get? $dd old]
+
+		# Update 'versions' for all lines that first appeared in the
+		# version following the one being examined
+
+		for {set j $from} {$j <= $to} {incr j} {
+		    set w [lindex $whither $j]
+		    if {$w > 0} {
+			lset versions $w [expr {$version + 1}]
+			lset dates $w $date
+			lset whos $w $who
+		    }
+		}
+
+		# Update 'whither' to preserve correspondence between the version
+		# being examined and the one being annotated.  Lines that do
+		# not exist in the annotated version are marked with -1.
+
+		set m1s [struct::list repeat [llength $old] -1]
+		if {$from <= $to} {
+		    set whither [eval [linsert $m1s 0 \
+					   lreplace $whither[set whither {}] $from $to]]
+		} else {
+		    set whither [eval [linsert $m1s 0 \
+					   linsert $whither[set whither {}] $from]]
+		}
+	    }
+	    set date $lastdate
+	    set who $lastwho
+	}
+
+	set result {}
+	foreach line $lines v $versions date $dates who $whos {
+	    lappend result [list $line $v $date $who]
+	}
+
+	return $result
+    }
+
+    #----------------------------------------------------------------------------
+    #
     # Getbinary --
     #
     #	return binary page content, with version V is V >= 0, else most recent

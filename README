@@ -40,6 +40,7 @@ Stop the server:
 Pages:
 ------
 
+blame           : show by who and when lines were added
 brokenlinks	: show list of broken links
 cleared		: show cleared pages
 diff            : show differences between version of a page.
@@ -143,11 +144,15 @@ Known privileges are none, read, write and admin. These priveleges give access
 to the following pages:
 
 - none  : login, logout, session, users, whoami
-- read  : brokenlinks, cleared, diff, help, history, htmlpreview, image,
+
+- read  : blame, brokenlinks, cleared, diff, help, history, htmlpreview, image,
           nextpage, page, preview, previouspage, random, recent, ref, revision,
           rss, search, sitemap, tclpreview, welcome
+
 - write : edit, new, rename, save, saveupload, upload
+
 - area  : editarea, savearea
+
 - admin : read, write, editarea, query, savearea
 
 To check if a page can be accessed by a user, the following steps are taken:

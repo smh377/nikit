@@ -2026,6 +2026,41 @@ oo::class create Wiki {
 	}
     }
 
+    method blame {N} {
+	if {![my getN N]} return
+	if {![my has_access $N read]} return
+	lassign [WDB GetPage $N name type] name type
+	set C ""
+	if {[my isTextPage $type]} {
+	    set apll [WDB AnnotatePageVersion $N]
+	    append C "<table>"
+	    set pversion -1
+	    foreach apl $apll {
+		lassign $apl line version time who
+		if {$pversion == $version} {
+		    append C "<br>" [armour $line]
+		} else {
+		    if {$pversion != -1} {
+			append C "</pre></td></tr>\n"
+		    }
+		    append C "<tr>"
+		    append C "<td>Version: $version<br>Date: [my datestamp $time]<br>Who: [armour $who]</td>"
+		    append C "<td><pre>[armour $line]"
+		    set pversion $version
+		}
+	    }
+	    if {$pversion != -1} {
+		append C "</pre></td></tr>\n"
+	    }
+	    append C "</table>"
+	} else {
+	    # Redirect to plain history
+	    $cgi redirect /history/[$cgi encode $name]
+	    return
+	}
+	my formatPage HeaderTitle [armour "History of $name"] PageTitle "History of [my aTag <a> href /page/[$cgi encode $name] $name]" Content $C Menu [my menuLI]
+    }
+
     method home {} {
 	set N [my LookupPage home 1]
 	if {[string is integer -strict $N]} {
@@ -2429,6 +2464,7 @@ oo::class create Wiki {
 
 	switch -exact -- $path {
 	    / - {} { my home }
+	    blame { my blame $page }
 	    brokenlinks { my brokenLinks }
 	    cleared { my cleared }
 	    diff { my diff $page }
