@@ -350,7 +350,7 @@ oo::class create Wiki {
     method has_access {N what {report 1}} {
 	set roles [my GetRoles]
 	# Admins can do anything.
-	if {"admin" in $roles} {
+	if {$what in {admin area} && $what in $roles} {
 	    return 1
 	}
 	# Parse the access rules text
@@ -1235,7 +1235,7 @@ oo::class create Wiki {
 
     method editarea {N} {
 	if {[my read_only]} return
-	if {![my has_access $N admin]} return
+	if {![my has_access $N area]} return
 	set origN $N
 	if {![my getN N]} return
 	if {![my loggedIn]} {
@@ -1436,7 +1436,7 @@ oo::class create Wiki {
     method saveArea {} {
 	if {[my read_only]} return
 	if {![my getNParam N]} return
-	if {![my has_access $N admin]} return
+	if {![my has_access $N area]} return
 	set C [$cgi getParam C "" 0]
 	set save [$cgi getParam save "" 0]
 	set cancel [$cgi getParam cancel "" 0]

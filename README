@@ -147,7 +147,8 @@ to the following pages:
           nextpage, page, preview, previouspage, random, recent, ref, revision,
           rss, search, sitemap, tclpreview, welcome
 - write : edit, new, rename, save, saveupload, upload
-- admin : editarea, query, savearea
+- area  : editarea, savearea
+- admin : read, write, editarea, query, savearea
 
 To check if a page can be accessed by a user, the following steps are taken:
 
