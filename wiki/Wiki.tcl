@@ -217,7 +217,7 @@ oo::class create Wiki {
 	if {![info exists menus(Recent)]} {
 	    set menus(Home)   [my aTag <a> href /welcome Home]
 	    set menus(Recent) [my aTag <a> rel nofollow href /recent "Recent changes"]
-	    set menus(Help)   [my aTag <a> rel nofollow href /help Help]
+	    set menus(Help)   [my aTag <a> rel nofollow href /page/help Help]
 	    set menus(HR)     <br>
 	    set menus(Search) [my aTag <a> rel nofollow href /search Search]
 	    set menus(WhoAmI) [my aTag <a> rel nofollow href /whoami Who]/[my aTag <a> rel nofollow href /login Login]/[my aTag <a> rel nofollow href /logout Logout]
@@ -1599,11 +1599,6 @@ oo::class create Wiki {
 	my whoAmI
     }
 
-    method help {} {
-	if {![my has_access -1 read]} return
-	my formatPage HeaderTitle [armour "Help"] PageTitle [armour "Help"] Content "No help yet"
-    }
-
     method search {} {
 	if {![my has_access -1 read]} return
 	set S [$cgi getParam S "" 0]
@@ -1613,7 +1608,7 @@ oo::class create Wiki {
 	append C [my aTag <legend> "Enter a Search Phrase"]\n
 	append C [my aTag <input> name submit type submit id searchsubmit value Search]\n
 	append C [my aTag <input> id searchstring title "Append an asterisk (*) to search on prefixes" name S type text value $S tabindex 1]\n
-	append C [my aTag <a> rel nofollow href /help Help]\n
+	append C [my aTag <a> rel nofollow href /page/help Help]\n
 	append C [my aTag <input> name _charset_ type hidden value "" tabindex 2]\n
 	append C "</fieldset>\n"
 	append C "</form>\n"
@@ -2400,7 +2395,6 @@ oo::class create Wiki {
 	    diff { my diff $page }
 	    edit { my edit $page}
 	    editarea { my editarea $page}
-	    help { my help }
 	    history { my history $page }
 	    htmlpreview { my htmlpreview }
 	    image { my image $page }
