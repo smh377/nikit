@@ -9,15 +9,13 @@ oo::class create MkUp {
     variable allow_include allow_inline_html backrefs backrefs_link_command category_link_command center code_block \
 	discussion discussion_count fixed_block html html_block include_id includes insdelcnt \
 	internal_link_command link_id lstack ltype options_block references row_count state \
-	table toc line_render_loop_limit
+	table toc line_render_loop_limit pending_pre_empty
 
     constructor {args} {
 	set allow_include 1
 	set allow_inline_html 1
 	set line_render_loop_limit 16
-#	set backrefs_link_command {}
-#	set category_link_command {}
-#	set internal_link_command {}
+	set pending_pre_empty 0
 	my configure {*}$args
     }
 
@@ -443,7 +441,7 @@ oo::class create MkUp {
 	    DISC    { }
 	    DL      { append html "</dl>" }
 	    DT      { append html "</dt>" }
-	    EMPTY   { append html "" }
+	    EMPTY   { }
 	    FIXED   { append html "</pre>" ; set fixed_block 0 }
 	    H1      { append html "</h1></a>" }
 	    H2      { append html "</h2></a>" }
@@ -469,12 +467,30 @@ oo::class create MkUp {
 
     method State2State { ostate nstate } {
 	switch -glob -- $ostate-$nstate {
-	    OL-OL - OL-UL - UL-OL - UL-UL { my OpenState $nstate }
 	    PRE-PRE - LINE-LINE { append html "\n" }
-	    DL-DT   { my OpenState DT }
-	    DD-DL   { my CloseState DD }
-	    DD-*    { my CloseState DD ; my CloseState DL ; my OpenState $nstate }
-	    default { my CloseState $ostate ; my OpenState $nstate }
+	    PRE-EMPTY { set pending_pre_empty 1 }
+	    EMPTY-PRE {
+		if {$pending_pre_empty} {
+		    set pending_pre_empty 0
+		    append html "\n\n"
+		} else {
+		    my OpenState PRE
+		}
+	    }
+	    EMPTY-EMPTY { append html "\n" }
+	    default {
+		if {$pending_pre_empty} {
+		    my CloseState PRE
+		    set pending_pre_empty 0
+		}
+		switch -glob -- $ostate-$nstate {
+		    OL-OL - OL-UL - UL-OL - UL-UL { my OpenState $nstate }
+		    DL-DT   { my OpenState DT }
+		    DD-DL   { my CloseState DD }
+		    DD-*    { my CloseState DD ; my CloseState DL ; my OpenState $nstate }
+		    default { my CloseState $ostate ; my OpenState $nstate }
+		}
+	    }
 	}
     }
 
