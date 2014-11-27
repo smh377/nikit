@@ -723,7 +723,7 @@ oo::class create Wiki {
 		set rdpnm [string trim [string range $C 12 end]]
 		lassign [my InfoProc $rdpnm 1 0] rdN rdName
 		if {[string is integer -strict $rdN] && $rdN != $N} {
-		    $cgi redirect /page/[$cgi encode $rdName]?R=0&O=$N
+		    $cgi redirect /page/[$cgi encode $rdName]?R=0&O=$N $server_name
 		    return
 		}
 	    }
@@ -1000,10 +1000,10 @@ oo::class create Wiki {
 	if {[string is integer -strict $N] && (($incr < 0 && $N > 0) || ($incr > 0 && $N < ([WDB PageCount]-1)))} {
 	    incr N $incr
 	    set name [WDB GetPage $N name]
-	    $cgi redirect /page/[$cgi encode $name]?R=0&E=1 302
+	    $cgi redirect /page/[$cgi encode $name]?R=0&E=1 $server_name 302
 	} else {
 	    set name [WDB GetPage $N name]
-	    $cgi redirect /page/[$cgi encode $name]?R=0&E=1 302
+	    $cgi redirect /page/[$cgi encode $name]?R=0&E=1 $server_name 302
 	}
     }
 
@@ -1022,11 +1022,11 @@ oo::class create Wiki {
 	    }
 	    incr n
 	    if {$n > 100} {
-		$cgi redirect /home 302
+		$cgi redirect /home $server_name 302
 		break
 	    }
 	}
-	$cgi redirect /page/[$cgi encode $name]?E=1 302
+	$cgi redirect /page/[$cgi encode $name]?E=1 $server_name 302
     }
 
     # Parameters: N = page number, S = start-point in history, L = number of lines
@@ -1237,7 +1237,7 @@ oo::class create Wiki {
 	    set newnick [$cgi cookie get wikit_e]
 	    set newwho $newnick@[$cgi getRequestParam REMOTE_ADDR]
 	    my RPC rpcrenamer $N $M $oldname $olddate $oldwho $type $newname [clock seconds] $newwho $type
-	    $cgi redirect /page/[$cgi encode $newname] 302
+	    $cgi redirect /page/[$cgi encode $newname] $server_name 302
 	} else {
 	    my formatTemplate TEMPLATE:rename N $N oldname [armour $oldname]
 	}
@@ -1253,7 +1253,7 @@ oo::class create Wiki {
 	set name [$cgi getParam pagename "" 0]
 	if {[string length $name]} {
 	    my InfoProc $name 0 1
-	    $cgi redirect /edit/[$cgi encode $name] 302
+	    $cgi redirect /edit/[$cgi encode $name] $server_name 302
 	    return
 	} else {
 	    my formatTemplate TEMPLATE:new
@@ -1372,11 +1372,11 @@ oo::class create Wiki {
 	set cancel [$cgi getParam cancel "" 0]
 	set name [WDB GetPage $N name]
 	if { [string tolower $cancel] eq "cancel" } {
-	    $cgi redirect /page/[$cgi encode $name] 302
+	    $cgi redirect /page/[$cgi encode $name] $server_name 302
 	    return
 	}
 	my RPC rpcareawriter $N $C
-	$cgi redirect /page/[$cgi encode $name] 302
+	$cgi redirect /page/[$cgi encode $name] $server_name 302
     }
 
     method save {} {
@@ -1391,7 +1391,7 @@ oo::class create Wiki {
 	set cancel [$cgi getParam cancel "" 0]
 	lassign [WDB GetPage $N name date who type ] name date who otype
 	if { [string tolower $cancel] eq "cancel" } {
-	    $cgi redirect /page/[$cgi encode $name] 302
+	    $cgi redirect /page/[$cgi encode $name] $server_name 302
 	    return
 	}
 	# Page completely cleared, don't save, there must remain one character at least.
@@ -1399,7 +1399,7 @@ oo::class create Wiki {
 	    set C [string trim [string map [list $comment_template ""] $C]]
 	}
 	if {$C eq ""} {
-	    $cgi redirect /page/[$cgi encode $name] 302
+	    $cgi redirect /page/[$cgi encode $name] $server_name 302
 	    return
 	}
 	if {![my loggedIn]} {
@@ -1444,7 +1444,7 @@ oo::class create Wiki {
 	    set C [string map {\t "        "} $C]
 	    if {$C eq [WDB GetContent $N]} {
 		# No need to save unchanged page
-		$cgi redirect /page/[$cgi encode $name] 302
+		$cgi redirect /page/[$cgi encode $name] $server_name 302
 		return
 	    }
 	    my RPC rpcwriter $N $C $who $name $type [clock seconds]
@@ -1452,7 +1452,7 @@ oo::class create Wiki {
 	    my errorPage 501 [armour "Edit failed"] "Editing of images not supported, try [my aTag <a> rel nofollow href /upload/[$cgi encode $name] uploading] the image."
 	    return
 	}
-	$cgi redirect /page/[$cgi encode $name] 302
+	$cgi redirect /page/[$cgi encode $name] $server_name 302
     }
 
     method mpm_boundary {} {
@@ -1504,7 +1504,7 @@ oo::class create Wiki {
 	    set C [string map {\t "        "} $C]
 	    if {$C eq [WDB GetContent $N]} {
 		# No need to save unchanged page
-		$cgi redirect /page/[$cgi encode $name] 302
+		$cgi redirect /page/[$cgi encode $name] $server_name 302
 		return
 	    }
 	} elseif {[my isImagePage $type] && [my isImagePage $otype]} {
@@ -1514,7 +1514,7 @@ oo::class create Wiki {
 	    return
 	}
 	my RPC rpcwriter $N $C $who $name $type [clock seconds]
-	$cgi redirect /page/[$cgi encode $name] 302
+	$cgi redirect /page/[$cgi encode $name] $server_name 302
     }
 
     method dec {rpc n def int} {
@@ -1567,10 +1567,10 @@ oo::class create Wiki {
 	    $cgi cookie set wikit_e $nick [clock scan "now + 10 days"] /
 	    set R [$cgi getParam R "" 0]
 	    if {[string length $R]} {
-		$cgi redirect $R 302
+		$cgi redirect $R $server_name 302
 		return
 	    } else {
-		$cgi redirect /whoami 302
+		$cgi redirect /whoami $server_name 302
 		return
 	    }
 	}
@@ -1807,7 +1807,7 @@ oo::class create Wiki {
 	    set C [regsub {%RC%} $C [string map {& \\&} $RC]]
 	    my formatPage HeaderTitle [armour "Welcome to the Tcler's Wiki"] PageTitle [armour "Welcome to the Tcler's Wiki"] Content $C
 	} else {
-	    $cgi redirect /home 302
+	    $cgi redirect /home $server_name 302
 	    return
 	}
     }
@@ -1980,7 +1980,7 @@ oo::class create Wiki {
 	    append C "</table>"
 	} else {
 	    # Redirect to plain history
-	    $cgi redirect /history/[$cgi encode $name]
+	    $cgi redirect /history/[$cgi encode $name] $server_name
 	    return
 	}
 	my formatPage HeaderTitle [armour "History of $name"] PageTitle "History of [my aTag <a> href /page/[$cgi encode $name] $name]" Content $C Menu [my menuLI]
@@ -2066,7 +2066,7 @@ oo::class create Wiki {
 			}
 		    }
 		}
-		$cgi redirect /session 302
+		$cgi redirect /session $server_name 302
 	    }
 	    "stop" {
 		if {[my has_role trusted]} {
@@ -2074,7 +2074,7 @@ oo::class create Wiki {
 		    my RPC rpcupdaterusersid [dict get $d username] ""
 		}
 		$cgi cookie delete wikit_sid
-		$cgi redirect http://$server_name:$server_http_port/ 302
+		$cgi redirect http://$server_name:$server_http_port "" 302
 	    }
 	    default {
 		if {[my has_role trusted]} {
@@ -2088,7 +2088,7 @@ oo::class create Wiki {
 		    my formatPage Content $C HeaderTitle "Session" PageTitle "Session"
 		} else {
 		    if {![$cgi existsRequestParam HTTPS] || ![$cgi getRequestParam HTTPS]} {
-			$cgi redirect https://$server_name:$server_https_port/session 302
+			$cgi redirect https://$server_name:$server_https_port/session "" 302
 		    } else {
 			my formatTemplate TEMPLATE:sessionlogin
 		    }
@@ -2157,7 +2157,7 @@ oo::class create Wiki {
 	    "update/user" {
 		set cancel [$cgi getParam cancel "" 0]
 		if { [string tolower $cancel] eq "cancel" } {
-		    $cgi redirect /users 302
+		    $cgi redirect /users $server_name 302
 		    return
 		}
 		set uname [$cgi getParam uname "" 0]
@@ -2169,7 +2169,7 @@ oo::class create Wiki {
 		    return
 		}
 		my RPC rpcupdateruser $uname $pword $sid $role
-		$cgi redirect /users 302
+		$cgi redirect /users $server_name 302
 	    }
 	    "delete" {
 		set uname [$cgi getParam U "" 0]
@@ -2183,12 +2183,12 @@ oo::class create Wiki {
 	    "delete/user" {
 		set cancel [$cgi getParam cancel "" 0]
 		if { [string tolower $cancel] eq "cancel" } {
-		    $cgi redirect /users 302
+		    $cgi redirect /users $server_name 302
 		    return
 		}
 		set uname [$cgi getParam uname "" 0]
 		my RPC rpcdeleteruser $uname
-		$cgi redirect /users 302
+		$cgi redirect /users $server_name 302
 	    }
 	    "insert" {
 		my formatTemplate TEMPLATE:insertuser
@@ -2196,7 +2196,7 @@ oo::class create Wiki {
 	    "insert/user" {
 		set cancel [$cgi getParam cancel "" 0]
 		if { [string tolower $cancel] eq "cancel" } {
-		    $cgi redirect /users 302
+		    $cgi redirect /users $server_name 302
 		    return
 		}
 		set uname [$cgi getParam uname "" 0]
@@ -2207,7 +2207,7 @@ oo::class create Wiki {
 		    return
 		}
 		my RPC rpcinserteruser $uname $pword "" $role
-		$cgi redirect /users 302
+		$cgi redirect /users $server_name 302
 	    }
 	    default {
 		set ll {}
@@ -2433,7 +2433,7 @@ oo::class create Wiki {
 	    whoami { my whoAmI }
 	    default {
 		if {[string is integer -strict $path] && $path < [WDB PageCount]} {
-		    $cgi redirect /page/$path 302
+		    $cgi redirect /page/$path $server_name 302
 		} else {
 		    set N [my LookupPage $path 1]
 		    if {[string is integer -strict $N]} {

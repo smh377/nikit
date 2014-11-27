@@ -87,8 +87,8 @@ oo::class create SCGIWiki {
 	set buffer [encoding convertto utf-8 "Status: 200 OK\n$header"]$content
     }
 
-    method redirect {url {status 301}} {
-	set header [$cgi redirect $url]
+    method redirect {url server_name {status 301}} {
+	set header [$cgi redirect $url $server_name]
 	set buffer [encoding convertto utf-8 "Status: $status\n$header"]
     }
 

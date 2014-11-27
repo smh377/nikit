@@ -702,7 +702,7 @@ method importAll {args} {
 # Side Effects:
 #	Outputs a redirect header
 
-method redirect {url} {
+method redirect {url {server_name ""}} {
 
     if {![regexp -- {^[^:]+://} $url]} {
 
@@ -740,13 +740,17 @@ method redirect {url} {
 	# URL.  Otherwise use SERVER_NAME.  These could be different, e.g.,
 	# "pop.scriptics.com" vs. "pop"
 
-	if {[dict exists $headers REQUEST_URI]} {
-	    # Not all servers have the leading protocol spec
-	    if {![regexp -- {^https?://([^/:]*)} [dict get $headers REQUEST_URI] x server]} {
+	if {[string length $server_name]} {
+	    set server $server_name
+	} else {
+	    if {[dict exists $headers REQUEST_URI]} {
+		# Not all servers have the leading protocol spec
+		if {![regexp -- {^https?://([^/:]*)} [dict get $headers REQUEST_URI] x server]} {
+		    set server [dict get $headers SERVER_NAME]
+		}
+	    } else {
 		set server [dict get $headers SERVER_NAME]
 	    }
-	} else {
-	    set server [dict get $headers SERVER_NAME]
 	}
 	if {[string match /* $url]} {
 	    set url $proto://$server$port$url
