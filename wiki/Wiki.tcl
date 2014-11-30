@@ -1004,7 +1004,7 @@ oo::class create Wiki {
 	    }
 	}
 	foreach from [WDB getIncludesFrom $N] {
-	    if {[my has_access $from read]
+	    if {[my has_access $from read]} {
 		lassign [WDB GetPage [dict get $from id] name date who] rname rdate rwho
 		lappend refList [list [my timestamp $rdate] $rname $rwho [dict get $from id] include]
 	    }
