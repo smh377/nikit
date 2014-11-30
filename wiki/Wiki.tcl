@@ -325,9 +325,9 @@ oo::class create Wiki {
 	if {![my has_access -1 read]} return
 	set C "<?xml version='1.0'?><rss version='0.91'>\n"
 	append C "<channel>\n"
-	append C "<title>[xmlarmour "Tcler's Wiki - Recent Changes"]</title>\n"
+	append C "<title>[xmlarmour "Recent Changes"]</title>\n"
 	append C "<link>[xmlarmour "http://$server_name:$server_http_port"]</link>\n"
-	append C "<description>[xmlarmour "Recent changes to Tcler's Wiki"]</description>\n"
+	append C "<description>[xmlarmour "Recent changes"]</description>\n"
 	set i 0
 	set edate [expr {[clock seconds]-$days_in_rss_history*86400}]
 	set pages [WDB RecentChanges $edate]
