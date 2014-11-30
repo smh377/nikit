@@ -280,7 +280,7 @@ oo::class create Wiki {
     method has_access {N what {report 1}} {
 	set roles [my GetRoles]
 	# Admins can do anything.
-	if {$what in {admin area} && $what in $roles} {
+	if {($what in {admin area} && $what in $roles) || "admin" in $roles} {
 	    return 1
 	}
 	# Parse the access rules text
