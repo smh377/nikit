@@ -704,7 +704,35 @@ oo::class create Wiki {
 	return [my showpage $N]
     }
 
-    method showpage {N} {
+    method add_motd {C} {
+	# include MOTD
+	set N [my LookupPage ADMIN:MOTD 1]
+	if {[string is integer -strict $N]} {
+	    set C [regsub {%MOTD%} $C [string map {& \\&} [WDB GetContent $N]]]
+	}
+	return $C
+    }
+
+    method add_recent_changes_summary {C} {
+	# include recent changes
+	set RC [my aTag <h4> "Recent changes"]\n
+	append RC <ul>\n
+	set threshold [expr {[clock seconds] - $days_in_history * 86400}]
+	set records [WDB RecentChanges $threshold]
+	set n 0
+	foreach record $records {
+	    append RC [my tag <li> [my aTag <a> href /page/[$cgi encode [dict get $record name]] [dict get $record name]]]\n
+	    if {[incr n] > 10} {
+		break
+	    }
+	}
+	append RC </ul>\n
+	append RC [my aTag <a> href /recent "More recent changes ..."]<br>\n
+	set C [regsub {%RC%} $C [string map {& \\&} $RC]]
+	return $C
+    }
+
+    method showpage {N {page_name ""} {include_rc_motd 0}} {
 	if {![my has_access $N read 1]} return
 	set T [my getIntParam T 0]
 	set R [my getIntParam R 1]
@@ -769,7 +797,16 @@ oo::class create Wiki {
 	    lappend menu [my aTag <a> rel nofollow href /history/[$cgi encode $name] History]
 	    lappend menu [my aTag <a> rel nofollow href /ref/[$cgi encode $name] References]
 
-	    my formatPage HeaderTitle [armour $name] PageTitle [my aTag <a> rel nofollow href /ref/[$cgi encode $name] $name] \
+	    if {[string length $page_name] == 0} {
+		set page_name $name
+	    }
+
+	    if {$include_rc_motd} {
+		set C [my add_motd $C]
+		set C [my add_recent_changes_summary $C]
+	    }
+
+	    my formatPage HeaderTitle [armour $page_name] PageTitle [my aTag <a> rel nofollow href /ref/[$cgi encode $name] $page_name] \
 		SubTitle [my subTitle $date $who "Updated" $O] Content $C TOC $T Menu [my menuLI $menu 0] PostLoad $PostLoad
 	} else {
 	    if {$T} {
@@ -1784,28 +1821,10 @@ oo::class create Wiki {
     method welcome {} {
 	set N [my LookupPage ADMIN:Welcome 1]
 	if {[string is integer -strict $N] && [my has_access -1 read 0]} {
-	    set C [WDB GetContent $N]
-	    # include MOTD
-	    set N [my LookupPage ADMIN:MOTD 1]
-	    if {[string is integer -strict $N]} {
-		set C [regsub {%MOTD%} $C [string map {& \\&} [WDB GetContent $N]]]
+	    my showpage $N "Welcome" 1
+	    if 0 {
+	    my formatPage HeaderTitle [armour "Welcome"] PageTitle [armour "Welcome"] Content $C
 	    }
-	    # include recent changes
-	    set RC [my aTag <h4> "Recent changes to this wiki"]\n
-	    append RC <ul>\n
-	    set threshold [expr {[clock seconds] - $days_in_history * 86400}]
-	    set records [WDB RecentChanges $threshold]
-	    set n 0
-	    foreach record $records {
-		append RC [my tag <li> [my aTag <a> href /page/[$cgi encode [dict get $record name]] [dict get $record name]]]\n
-		if {[incr n] > 10} {
-		    break
-		}
-	    }
-	    append RC </ul>\n
-	    append RC [my aTag <a> href /recent "More recent changes ..."]<br>\n
-	    set C [regsub {%RC%} $C [string map {& \\&} $RC]]
-	    my formatPage HeaderTitle [armour "Welcome to the Tcler's Wiki"] PageTitle [armour "Welcome to the Tcler's Wiki"] Content $C
 	} else {
 	    $cgi redirect /home $server_name 302
 	    return
