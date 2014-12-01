@@ -405,9 +405,9 @@ oo::class create MkUp {
 	    EMPTY   { }
 	    END     { if {$discussion} { append html "</div>" } }
 	    FIXED   { append html "<pre class='mkup_pre'>" ; set fixed_block 1 }
-	    H1      { set id [my TocId 1] ; append html "<a class='mkup_a' id='$id'><h1 class='mkup_h1'>" ; lappend toc [dict create type 1 id $id data [dict get $ltype data]] }
-	    H2      { set id [my TocId 2] ; append html "<a class='mkup_a' id='$id'><h2 class='mkup_h2'>" ; lappend toc [dict create type 2 id $id data [dict get $ltype data]] }
-	    H3      { set id [my TocId 3] ; append html "<a class='mkup_a' id='$id'><h3 class='mkup_h3'>" ; lappend toc [dict create type 3 id $id data [dict get $ltype data]] }
+	    H1      { set id [my TocId 1] ; append html "<a class='mkup_a' id='$id'><h3 class='mkup_h1'>" ; lappend toc [dict create type 1 id $id data [dict get $ltype data]] }
+	    H2      { set id [my TocId 2] ; append html "<a class='mkup_a' id='$id'><h4 class='mkup_h2'>" ; lappend toc [dict create type 2 id $id data [dict get $ltype data]] }
+	    H3      { set id [my TocId 3] ; append html "<a class='mkup_a' id='$id'><h5 class='mkup_h3'>" ; lappend toc [dict create type 3 id $id data [dict get $ltype data]] }
 	    HR      { append html "<hr class='mkup_hr'>" }
 	    HTML    { set html_block 1 }
 	    INC     {
@@ -443,9 +443,9 @@ oo::class create MkUp {
 	    DT      { append html "</dt>" }
 	    EMPTY   { }
 	    FIXED   { append html "</pre>" ; set fixed_block 0 }
-	    H1      { append html "</h1></a>" }
-	    H2      { append html "</h2></a>" }
-	    H3      { append html "</h3></a>" }
+	    H1      { append html "</h3></a>" }
+	    H2      { append html "</h4></a>" }
+	    H3      { append html "</h5></a>" }
 	    HR      { append html "" }
 	    HTML    { set html_block 0 }
 	    INC     { }
