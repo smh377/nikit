@@ -149,7 +149,7 @@ oo::class create MkUp {
 	    if {[regexp {^\!\!\!\!\!\!$} $line]} { return [list [dict create type CENTER data ""]] }
 	    if {[regexp {^===((tcl|c|cpp|none|))\s*$} $line -> data]} { return [list {type FIXED data "" code $data}] }
 	    if {$allow_inline_html && [regexp {^<<inlinehtml>>$} $line]} { return [list [dict create type HTML data ""]] }
-	    if {[regexp {^<<toc>>$} $line]} { return [list [dict create type TOC data ""]] }
+	    if {[regexp {^<<(toc|TOC)>>$} $line]} { return [list [dict create type TOC data ""]] }
 	    if {[regexp {^<<categories>>(.*)$} $line -> links]} { return [list [dict create type CAT links $links data ""]] }
 	    if {[regexp {^<<backrefs>>$} $line]} { return [list [dict create type BREF link "" data ""]] }
 	    if {[regexp {^<<backrefs:(.*)>>$} $line -> link]} { return [list [dict create type BREF link $link data ""]] }
