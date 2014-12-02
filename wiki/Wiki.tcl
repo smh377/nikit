@@ -26,6 +26,7 @@ oo::class create Wiki {
     variable writer
     variable writer_host
     variable writer_port
+    variable admin_menu
 
     constructor {args} {
 	set enc(rpcwriter) {N 0 C 1 who 1 name 1 type 1 time 0}
@@ -50,6 +51,7 @@ oo::class create Wiki {
 	set writer_port 8009
 	set tcl_uid 0
 	set writer 0
+	set admin_menu 0
 	set cgi {}
 	set included_pages {}
 	foreach {k v} $args {
@@ -787,15 +789,25 @@ oo::class create Wiki {
 		incr containerid
 	    }
 	    set menu {}
-	    lappend menu [my aTag <a> rel nofollow href /previouspage/[$cgi encode $name] "Previous page"]
-	    lappend menu [my aTag <a> rel nofollow href /nextpage/[$cgi encode $name] "Next page"]
-	    lappend menu {*}[my menus HR]
-	    lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name] Edit]
-	    lappend menu [my aTag <a> rel nofollow href /editarea/[$cgi encode $name] Access]
-	    lappend menu [my aTag <a> rel nofollow href /upload/[$cgi encode $name] Upload]
-	    lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name]?A=1 Comment]
-	    lappend menu [my aTag <a> rel nofollow href /history/[$cgi encode $name] History]
-	    lappend menu [my aTag <a> rel nofollow href /ref/[$cgi encode $name] References]
+	    if {$admin_menu} {
+		set N [my LookupPage ADMIN:Menu 1]
+		if {[string is integer -strict $N]} {
+		    set menu [WDB GetContent $N]
+		} else {
+		    set menu ""
+		}
+	    } else {
+		lappend menu [my aTag <a> rel nofollow href /previouspage/[$cgi encode $name] "Previous page"]
+		lappend menu [my aTag <a> rel nofollow href /nextpage/[$cgi encode $name] "Next page"]
+		lappend menu {*}[my menus HR]
+		lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name] Edit]
+		lappend menu [my aTag <a> rel nofollow href /editarea/[$cgi encode $name] Access]
+		lappend menu [my aTag <a> rel nofollow href /upload/[$cgi encode $name] Upload]
+		lappend menu [my aTag <a> rel nofollow href /edit/[$cgi encode $name]?A=1 Comment]
+		lappend menu [my aTag <a> rel nofollow href /history/[$cgi encode $name] History]
+		lappend menu [my aTag <a> rel nofollow href /ref/[$cgi encode $name] References]
+		set menu [my menuLI $menu 0]
+	    }
 
 	    if {[string length $page_name] == 0} {
 		set page_name $name
@@ -807,7 +819,7 @@ oo::class create Wiki {
 	    }
 
 	    my formatPage HeaderTitle [armour $page_name] PageTitle [my aTag <a> rel nofollow href /ref/[$cgi encode $name] $page_name] \
-		SubTitle [my subTitle $date $who "Updated" $O] Content $C TOC $T Menu [my menuLI $menu 0] PostLoad $PostLoad
+		SubTitle [my subTitle $date $who "Updated" $O] Content $C TOC $T Menu $menu PostLoad $PostLoad
 	} else {
 	    if {$T} {
 		my binary $N -1

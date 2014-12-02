@@ -34,7 +34,7 @@ proc handle_request {sock headers body} {
 #    puts "####################################################################################################"
 
     set cgi [SCGIWiki new sock $sock headers $headers body $body]
-    set wikiserver [Wiki new cgi $cgi server_name localhost read_only 0 writer $::writer]
+    set wikiserver [Wiki new cgi $cgi server_name localhost read_only 0 writer $::writer admin_menu 1]
     $cgi configure server $wikiserver
     $cgi process
     $cgi destroy
