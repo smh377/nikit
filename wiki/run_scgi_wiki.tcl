@@ -1,4 +1,9 @@
+set read_only 0
 set writer 0
+set server_name localhost
+set server_http_port 8000
+set server_https_port 443
+
 foreach {k v} $argv {
     set [string trim $k -] $v
 }
@@ -34,7 +39,13 @@ proc handle_request {sock headers body} {
 #    puts "####################################################################################################"
 
     set cgi [SCGIWiki new sock $sock headers $headers body $body]
-    set wikiserver [Wiki new cgi $cgi server_name localhost read_only 0 writer $::writer]
+    set wikiserver [Wiki new \
+			cgi $cgi \
+			server_name $::server_name \
+			server_http_port $::server_http_port \
+			server_https_port $::server_https_port \
+			read_only $::read_only \
+			writer $::writer]
     $cgi configure server $wikiserver
     $cgi process
     $cgi destroy

@@ -33,7 +33,7 @@ elif [ "$(which netbin)" != "" ]; then
     netbin $dir/wiki/run_scgi_wiki.tcl -writer 0 &
     netbin $dir/wiki/run_scgi_wiki.tcl -writer 1 &
 elif [ "$(which tclsh)" != "" ]; then
-    tclsh $dir/wiki/run_scgi_wiki.tcl -writer 0 &
+    tclsh $dir/wiki/run_scgi_wiki.tcl -writer 0 -server_name 192.168.178.33 &
     tclsh $dir/wiki/run_scgi_wiki.tcl -writer 1 &
 elif [ "$(which tclkit)" != "" ]; then
     tclkit $dir/wiki/run_scgi_wiki.tcl -writer 0 &
