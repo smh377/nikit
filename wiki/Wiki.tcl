@@ -1171,11 +1171,16 @@ oo::class create Wiki {
 	if {![my has_access $N write]} return
 	set A [my getIntParam A 0]
 	set V [my getIntParam V -1]
+	set Q [my getIntParam Q 1]
 	if {![my loggedIn]} {
 	    my login /edit/[$cgi encode $origN]?A=$A&V=$V
 	    return
 	}
 	lassign [WDB GetPage $N name date who type] name date who type
+	if {$Q && ![WDB CountContentTextOrBinary $N]} {
+	    my choose_page_type /edit/[$cgi encode $origN]?A=$A&V=$V&Q=0 /upload/[$cgi encode $origN]?A=$A&V=$V&Q=0
+	    return
+	}
 	if {[my isTextPage $type]} {
 	    set as_comment 0
 	    if {$A} {
@@ -1612,6 +1617,22 @@ oo::class create Wiki {
 	    }
 	}
 	my formatTemplate TEMPLATE:login url [armour $url]
+    }
+
+    method choose_page_type {{edit_url ""} {upload_url ""}} {
+	set RE [$cgi getParam RE "" 0]
+	set RU [$cgi getParam RU "" 0]
+	if {[string length $RE] && [string length $RU]} {
+	    set T [$cgi getParam T "" 0]
+	    if {$T in {TE}} {
+		$cgi redirect $RE $server_name 302
+		return
+	    } elseif {$T in {TU BU}} {
+		$cgi redirect $RU $server_name 302
+		return
+	    }
+	}
+	my formatTemplate TEMPLATE:choose_page_type edit_url [armour $edit_url] upload_url [armour $upload_url]
     }
 
     method whoAmI {} {
@@ -2415,6 +2436,7 @@ oo::class create Wiki {
 	    / - {} { my home }
 	    blame { my blame $page }
 	    brokenlinks { my brokenLinks }
+	    choose_page_type { my choose_page_type }
 	    cleared { my cleared }
 	    diff { my diff $page }
 	    edit { my edit $page}

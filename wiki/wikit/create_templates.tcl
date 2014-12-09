@@ -622,6 +622,56 @@ ${Content}
 
 ################################################################################
 
+    set choose_page_type {<!DOCTYPE html>
+<!-- saved from url=(0040)http://getbootstrap.com/examples/signin/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Choose page type</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/signin.css" rel="stylesheet">
+
+    <script src="/scripts/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="chrome-extension://cgndfbhngibokieehnjhbjkkhbfmhojo/css/validation.css"></head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" action="/choose_page_type" id="choose_page_type">
+        <h2 class="form-signin-heading">Choose page type</h2>
+        <p>Please select the page type for page .</p>
+        <input type="radio" name="T" value="TE">Text (edit)<br>
+        <input type="radio" name="T" value="TU">Text (upload)<br>
+        <input type="radio" name="T" value="BU">Image (upload)<br><br>
+        <input name='RE' type='hidden' value='${edit_url}'>
+        <input name='RU' type='hidden' value='${upload_url}'>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Continue</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/scripts/ie10-viewport-bug-workaround.js"></script>
+
+</body></html>}
+
     proc get {args} {
 	set t ""
 	foreach k $args {
@@ -630,6 +680,8 @@ ${Content}
 	return $t
     }
 }
+
+################################################################################
 
 tdbc::sqlite3::connection create db [lindex $argv 0]
 
@@ -642,7 +694,7 @@ set stmnt6 [db prepare {SELECT COUNT(*) FROM pages WHERE name = :name}]
 set stmnt7 [db prepare {SELECT id FROM pages WHERE name = :name}]
 set stmnt8 [db prepare {SELECT COUNT(*) FROM pages}]
 
-foreach n {content cssjs edit preview error login sessionlogin updateuser deleteuser insertuser new rename page query upload editarea} {
+foreach n {content cssjs edit preview error login sessionlogin updateuser deleteuser insertuser new rename page query upload editarea choose_page_type} {
     set name TEMPLATE:$n
     set date [clock seconds]
     set who "init"

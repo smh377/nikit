@@ -10,7 +10,7 @@ tdbc::sqlite3::connection create db [lindex $argv 0]
 set stmnt1 [db prepare {select * from pages where name = :name}]
 set stmnt2 [db prepare {select * from pages_content where id = :pid}]
 
-foreach n {content cssjs edit editarea preview error login sessionlogin updateuser deleteuser insertuser new rename page query upload} {
+foreach n {content cssjs edit editarea preview error login sessionlogin updateuser deleteuser insertuser new rename page query upload choose_page_type} {
     puts [string repeat # 80]
     puts ""
     set name "TEMPLATE:$n"

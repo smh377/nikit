@@ -1224,6 +1224,18 @@ namespace eval WDB {
 	}
     }
 
+    proc CountContentTextOrBinary {id} {
+	set rsc [[statement "count_binary_for_id"] execute]
+	$rsc nextdict d
+	$rsc close
+	set nb [dict get $d COUNT(*)]
+	set rsc [[statement "count_content_for_id"] execute]
+	$rsc nextdict d
+	$rsc close
+	set nt [dict get $d COUNT(*)]
+	return [expr $nb || $nt]
+    }
+
     proc WikiDatabase {args} {
 	variable db wdb
 	variable file wikit.db
