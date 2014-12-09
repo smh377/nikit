@@ -1,4 +1,5 @@
 package require tdbc::sqlite3
+package require sha256
 
 # Compile sqlite with the following defines:
 #
@@ -113,7 +114,7 @@ foreach id $ids name $names page $pages area $areas {
     db allrows {INSERT INTO pages_content_fts (id, name, content) VALUES (:id, :name, :page)}
 }
 
-db allrows {INSERT INTO users (username, password, sid, role) VALUES ("admin", "admin", "", "admin")}
+db allrows {INSERT INTO users (username, password, sid, role) VALUES ("admin", [::sha2::sha256 "admin"], "", "admin")}
 
 db close
 
