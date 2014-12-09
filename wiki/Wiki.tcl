@@ -265,7 +265,7 @@ oo::class create Wiki {
 
     method GetDefaultPageAcessRules {name} {
 	set acd {}
-	set prard [string map {\n " "} [WDB GetContent [my LookupPage "ACCESSRULES" 1]]]
+	set prard [string map {\n " "} [WDB GetContent [my LookupPage "ADMIN:ACCESSRULES" 1]]]
 	dict for {page role_access_rules} $prard {
 	    if {[string match $page $name]} {
 		set acd {}

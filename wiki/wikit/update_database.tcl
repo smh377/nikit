@@ -43,7 +43,7 @@ set pid [dict get $d "COUNT(*)"]
 
 set date [clock seconds]
 set who "init"
-set names [list "ACCESSRULES"]
+set names [list "ADMIN:ACCESSRULES"]
 set pages [list {* {all {read write}} admin {}}]
 set areas [list "admin"]
 foreach name $names page $pages area $areas {

@@ -104,7 +104,7 @@ set wikitoc "<div class='toc1'>M1
 set date [clock seconds]
 set who "init"
 set ids   [list 0                     1                           2]
-set names [list "ADMIN:Welcome"       "ADMIN:MOTD"                "ACCESSRULES"]
+set names [list "ADMIN:Welcome"       "ADMIN:MOTD"                "ADMIN:ACCESSRULES"]
 set pages [list "Welcome page (html)" "Message of the day (html)" {* {all {read write}} admin {}}]
 set areas [list "admin"               "admin"                     "admin"]
 foreach id $ids name $names page $pages area $areas {
