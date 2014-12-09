@@ -2078,7 +2078,7 @@ oo::class create Wiki {
 		if {[string length $uname] && [string length $pword]} {
 		    if {[WDB CountUser $uname] == 1} {
 			set d [WDB GetUserByName $uname]
-			if {$pword eq [dict get $d password]} {
+			if {[::sha2::sha256 $pword] eq [dict get $d password]} {
 			    set sid [my sid $d]
 			    my RPC rpcupdaterusersid $uname $sid
 			    $cgi cookie set wikit_sid $sid [clock scan "now + 1 day"] /
@@ -2187,6 +2187,11 @@ oo::class create Wiki {
 		    my pageNotFound users/update/user
 		    return
 		}
+		set d [WDB GetUserByName $uname]
+		if {$pword != [dict get $d password]} {
+		    # Password was changed
+		    set pword [::sha2::sha256 $pword]
+		}
 		my RPC rpcupdateruser $uname $pword $sid $role
 		$cgi redirect /users $server_name 302
 	    }
@@ -2225,7 +2230,7 @@ oo::class create Wiki {
 		    my pageNotFound users/insert/user
 		    return
 		}
-		my RPC rpcinserteruser $uname $pword "" $role
+		my RPC rpcinserteruser $uname [::sha2::sha256 $pword] "" $role
 		$cgi redirect /users $server_name 302
 	    }
 	    default {
